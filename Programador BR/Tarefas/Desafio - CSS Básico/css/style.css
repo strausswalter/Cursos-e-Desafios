@@ -1,0 +1,33 @@
+body{
+    background-color: black;
+}
+
+.card{
+    
+background: url('../assets/backgorund.png') no-repeat;
+width: 400px;
+height: 200px;
+padding: 1px 20px;
+margin: auto;
+margin-top: 10%;
+box-sizing: border-box;
+background-size: cover;
+
+}
+
+a{
+    text-decoration: none;
+    color: black;
+
+}
+
+
+.instagram{
+    list-style-image: url(../assets/Insta.png);
+}
+.twitter{
+    list-style-image: url(../assets/Twitter.png);
+}
+.youtube{
+    list-style-image: url(../assets/Youtube.png);
+}
