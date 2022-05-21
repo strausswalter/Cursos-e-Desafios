@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Formulário</title>
+    </head>
+    <body>
+
+        <h1>Formulário</h1>
+        <hr>
+
+        <form action="envia.php" method="post" enctype="multipart/form-data">
+            <label for="idnome">Nome:</label>
+            <input type="text" name="txtNome" id="idnome" required="required" placeholder="Digite o seu nome" autofocus>
+
+            <br><br>
+
+            <label for="idemail">Email:</label>
+            <input type="email" name="txtEmail" id="idemail" required="required" placeholder="exemplo@gmail.com" autocomplete="off">
+
+        
+
+            <br><br>
+
+            <label for="idsenha">Senha:</label>
+            <input type="password" name="txtSenha" id="idsenha" maxlength="8" minlength="6" autocomplete="off">
+
+            <br><br>
+
+
+            <label for="">Estado Civil:</label>
+
+            <input type="radio" name="txtEstCivil" value="Solteiro" id="idsolteiro">
+            <label for="idsolteiro">Solteiro</label>
+            <input type="radio" name="txtEstCivil" value="Casado" id="idcasado" checked="checked">
+            <label for="idcasado">Casado</label>
+            <input type="radio" name="txtEstCivil" value="Viúvo" id="idviuvo">
+            <label for="idviuvo">Viúvo</label>
+            <br><br>
+
+            <label for="">Marque seus Interesses:</label>
+
+            <input type="checkbox" name="txtInt" value="Futebol" id="idfutebol">
+            <label for="idfutebol">Futebol</label>
+
+            <input type="checkbox" name="txtInt" value="Games" id="idgames">
+            <label for="idgames">Games</label>
+
+            <input type="checkbox" name="txtInt" value="Cinema" id="idcinema">
+            <label for="idcinema">Cinema</label>
+
+            <br><br>
+
+            <label for="idtime">Escolha seu time:</label>
+            <select name="txtTime" id="idtime">
+                <option value="">-------------</option>
+                <option value="fla">Flamengo</option>
+                <option value="vas">Vasco</option>
+                <option value="bot" selected="selected">Botafogo</option>
+                <option value="flu">Fluminense</option>
+            </select>
+            <br><br>
+            <label for="idmsg">Digite sua mensagem:</label>
+            <br>
+            <textarea name="txtMsg" id="idmsg"></textarea>
+
+
+
+
+            <br><br>
+
+            <input type="checkbox" name="txtCad" value="sim" id="idcadastro">
+            <label for="idcadastro">Deseja receber informações de nossos parceiros?</label>
+
+<hr>
+            <br><br>
+
+            <label for="idqtd">Quantidade:</label>
+            <input type="number" name="txtQtd" id="idqtd" min="0" max="10">
+
+            <br><br>
+
+            <label for="iddata">Escolha um data:</label>
+            <input type="date" name="txtData" id="iddata" min="2000-12-01" max="">
+
+            <br><br>
+
+            <label for="idarquivo">Arquivo:</label>
+            <input type="file" name="txtArquivo" id="idarquivo" multiple>
+
+
+            
+
+
+
+
+
+<hr>
+
+
+            <br><br><br>
+
+
+            <input type="submit" value="Enviar">
+
+        </form>
+
+
+    </body>
+</html>

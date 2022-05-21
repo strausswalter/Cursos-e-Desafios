@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('a[href^="#"]').on('click.smoothscroll',function (e) {
+        e.preventDefault();
+
+        var target = this.hash,
+        $target = $(target);
+
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+        }, 900, 'swing', function () {
+            window.location.hash = target;
+        });
+    });
+});
+</script>
+
+</head>
+<body>
+    <div id="topo">
+        <a href="#flamengo">Flamengo</a>
+        <a href="#vasco">Vasco</a>
+        <a href="#botafogo">Botafogo</a>
+        <a href="#fluminense">Fluminense</a>
+        <a href="#america">America</a>
+    </div>
+
+    <div id="flamengo">
+        <h2>Flamengo</h2>
+        <p>Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis expedita quidem ipsa itaque molestias neque modi iste, et iure, architecto libero. Culpa, ipsum totam nemo quis ut perspiciatis cum id?
+             ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatum expedita nulla aliquam explicabo, fugit eos cupiditate molestias magnam asperiores impedit fugiat sunt eligendi tenetur? Sapiente doloremque fugiat amet repudiandae.
+
+        </p>
+        <p>Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis expedita quidem ipsa itaque molestias neque modi iste, et iure, architecto libero. Culpa, ipsum totam nemo quis ut perspiciatis cum id?
+            ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatum expedita nulla aliquam explicabo, fugit eos cupiditate molestias magnam asperiores impedit fugiat sunt eligendi tenetur? Sapiente doloremque fugiat amet repudiandae.
+
+       </p>
+       <p>Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis expedita quidem ipsa itaque molestias neque modi iste, et iure, architecto libero. Culpa, ipsum totam nemo quis ut perspiciatis cum id?
+        ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatum expedita nulla aliquam explicabo, fugit eos cupiditate molestias magnam asperiores impedit fugiat sunt eligendi tenetur? Sapiente doloremque fugiat amet repudiandae.
+
+        </p>
+        <p>Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis expedita quidem ipsa itaque molestias neque modi iste, et iure, architecto libero. Culpa, ipsum totam nemo quis ut perspiciatis cum id?
+        ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatum expedita nulla aliquam explicabo, fugit eos cupiditate molestias magnam asperiores impedit fugiat sunt eligendi tenetur? Sapiente doloremque fugiat amet repudiandae.
+        </p>
+
+        <img src="" alt="Foto Flamengo">
+        <br><br>
+
+        <a href="#topo">Ir para o topo</a>
+    </div>
+
+
+
+    <div id="vasco">
+        <h2>Vasco</h2>
+        <p>Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis expedita quidem ipsa itaque molestias neque modi iste, et iure, architecto libero. Culpa, ipsum totam nemo quis ut perspiciatis cum id?
+             ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatum expedita nulla aliquam explicabo, fugit eos cupiditate molestias magnam asperiores impedit fugiat sunt eligendi tenetur? Sapiente doloremque fugiat amet repudiandae.
+
+        </p>
+        <p>Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis expedita quidem ipsa itaque molestias neque modi iste, et iure, architecto libero. Culpa, ipsum totam nemo quis ut perspiciatis cum id?
+            ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatum expedita nulla aliquam explicabo, fugit eos cupiditate molestias magnam asperiores impedit fugiat sunt eligendi tenetur? Sapiente doloremque fugiat amet repudiandae.
+
+       </p>
+       <p>Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis expedita quidem ipsa itaque molestias neque modi iste, et iure, architecto libero. Culpa, ipsum totam nemo quis ut perspiciatis cum id?
+        ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatum expedita nulla aliquam explicabo, fugit eos cupiditate molestias magnam asperiores impedit fugiat sunt eligendi tenetur? Sapiente doloremque fugiat amet repudiandae.
+
+        </p>
+        <p>Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis expedita quidem ipsa itaque molestias neque modi iste, et iure, architecto libero. Culpa, ipsum totam nemo quis ut perspiciatis cum id?
+        ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatum expedita nulla aliquam explicabo, fugit eos cupiditate molestias magnam asperiores impedit fugiat sunt eligendi tenetur? Sapiente doloremque fugiat amet repudiandae.
+        </p>
+
+        <img src="" alt="Foto Vasco">
+        <br><br>
+
+        <a href="#topo">Ir para o topo</a>
+    </div>
+
+
+
+    <div id="botafogo">
+        <h2>Botafogo</h2>
+        <p>Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis expedita quidem ipsa itaque molestias neque modi iste, et iure, architecto libero. Culpa, ipsum totam nemo quis ut perspiciatis cum id?
+             ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatum expedita nulla aliquam explicabo, fugit eos cupiditate molestias magnam asperiores impedit fugiat sunt eligendi tenetur? Sapiente doloremque fugiat amet repudiandae.
+
+        </p>
+        <p>Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis expedita quidem ipsa itaque molestias neque modi iste, et iure, architecto libero. Culpa, ipsum totam nemo quis ut perspiciatis cum id?
+            ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatum expedita nulla aliquam explicabo, fugit eos cupiditate molestias magnam asperiores impedit fugiat sunt eligendi tenetur? Sapiente doloremque fugiat amet repudiandae.
+
+       </p>
+       <p>Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis expedita quidem ipsa itaque molestias neque modi iste, et iure, architecto libero. Culpa, ipsum totam nemo quis ut perspiciatis cum id?
+        ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatum expedita nulla aliquam explicabo, fugit eos cupiditate molestias magnam asperiores impedit fugiat sunt eligendi tenetur? Sapiente doloremque fugiat amet repudiandae.
+
+        </p>
+        <p>Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis expedita quidem ipsa itaque molestias neque modi iste, et iure, architecto libero. Culpa, ipsum totam nemo quis ut perspiciatis cum id?
+        ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatum expedita nulla aliquam explicabo, fugit eos cupiditate molestias magnam asperiores impedit fugiat sunt eligendi tenetur? Sapiente doloremque fugiat amet repudiandae.
+        </p>
+
+        <img src="" alt="Foto Botafogo">
+        <br><br>
+
+        <a href="#topo">Ir para o topo</a>
+    </div>
+
+
+    <div id="fluminense">
+        <h2>Fluminense</h2>
+        <p>Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis expedita quidem ipsa itaque molestias neque modi iste, et iure, architecto libero. Culpa, ipsum totam nemo quis ut perspiciatis cum id?
+             ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatum expedita nulla aliquam explicabo, fugit eos cupiditate molestias magnam asperiores impedit fugiat sunt eligendi tenetur? Sapiente doloremque fugiat amet repudiandae.
+
+        </p>
+        <p>Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis expedita quidem ipsa itaque molestias neque modi iste, et iure, architecto libero. Culpa, ipsum totam nemo quis ut perspiciatis cum id?
+            ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatum expedita nulla aliquam explicabo, fugit eos cupiditate molestias magnam asperiores impedit fugiat sunt eligendi tenetur? Sapiente doloremque fugiat amet repudiandae.
+
+       </p>
+       <p>Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis expedita quidem ipsa itaque molestias neque modi iste, et iure, architecto libero. Culpa, ipsum totam nemo quis ut perspiciatis cum id?
+        ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatum expedita nulla aliquam explicabo, fugit eos cupiditate molestias magnam asperiores impedit fugiat sunt eligendi tenetur? Sapiente doloremque fugiat amet repudiandae.
+
+        </p>
+        <p>Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis expedita quidem ipsa itaque molestias neque modi iste, et iure, architecto libero. Culpa, ipsum totam nemo quis ut perspiciatis cum id?
+        ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatum expedita nulla aliquam explicabo, fugit eos cupiditate molestias magnam asperiores impedit fugiat sunt eligendi tenetur? Sapiente doloremque fugiat amet repudiandae.
+        </p>
+
+        <img src="" alt="Foto Fluminense">
+        <br><br>
+
+        <a href="#topo">Ir para o topo</a>
+    </div>
+
+
+    <div id="america">
+        <h2>America</h2>
+        <p>Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis expedita quidem ipsa itaque molestias neque modi iste, et iure, architecto libero. Culpa, ipsum totam nemo quis ut perspiciatis cum id?
+             ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatum expedita nulla aliquam explicabo, fugit eos cupiditate molestias magnam asperiores impedit fugiat sunt eligendi tenetur? Sapiente doloremque fugiat amet repudiandae.
+
+        </p>
+        <p>Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis expedita quidem ipsa itaque molestias neque modi iste, et iure, architecto libero. Culpa, ipsum totam nemo quis ut perspiciatis cum id?
+            ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatum expedita nulla aliquam explicabo, fugit eos cupiditate molestias magnam asperiores impedit fugiat sunt eligendi tenetur? Sapiente doloremque fugiat amet repudiandae.
+
+       </p>
+       <p>Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis expedita quidem ipsa itaque molestias neque modi iste, et iure, architecto libero. Culpa, ipsum totam nemo quis ut perspiciatis cum id?
+        ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatum expedita nulla aliquam explicabo, fugit eos cupiditate molestias magnam asperiores impedit fugiat sunt eligendi tenetur? Sapiente doloremque fugiat amet repudiandae.
+
+        </p>
+        <p>Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis expedita quidem ipsa itaque molestias neque modi iste, et iure, architecto libero. Culpa, ipsum totam nemo quis ut perspiciatis cum id?
+        ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatum expedita nulla aliquam explicabo, fugit eos cupiditate molestias magnam asperiores impedit fugiat sunt eligendi tenetur? Sapiente doloremque fugiat amet repudiandae.
+        </p>
+
+        <img src="" alt="Foto America">
+        <br><br>
+
+        <a href="#topo">Ir para o topo</a>
+    </div>
+
+
+
+
+</body>
+</html>
