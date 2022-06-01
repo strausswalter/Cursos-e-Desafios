@@ -98,11 +98,9 @@ header{
     display: inline-block;
     /* Texto que também tem o comportamento de blocos herdado do elemento pai */
     /* quando estiver usando display: inline no elemento pai, usar display: inline-block no filho para este herdar altura do pai. */
-
 }
 .menu a:hover{
     background-color: #f8f9fb;
     color: #49cbcd;
     border-bottom: 2px solid #49cbcd;
 }
-
