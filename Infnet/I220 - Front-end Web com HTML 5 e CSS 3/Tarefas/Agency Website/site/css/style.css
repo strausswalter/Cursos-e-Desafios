@@ -69,7 +69,8 @@ table {
 .container{
     width: 1170px;
     margin: 0 auto;
-    /* background-color: red; */
+    /* background-color: blue;  */
+
 }
 
 header{
@@ -84,20 +85,14 @@ header{
 }
 .menu li{
     display: inline;
-    /* Trabalhar como texto */
-    /* não dá para configurar largura e altura de um elemento inline. */
-    /* para centralizar automaticamente sem precisar de calculos. e para preencher o hover abaixo. */
 }
 .menu a{
-    text-decoration: none;
-    font-size: 1.5em;
+    text-decoration: none; /* Para retirar o sublinhado dos links. A propriedade text-decoration do CSS é usada para definir a formatação de  underline, overline, line-through ou blink. As decorações underline e overline são posicionadas abaixo e acima do texto (respectivamente), e line-through cortando-o. */
+    font-size: 1.5em; /* Esta fonte terá 1.5x do Body{font-size: 10px;} expecificado mais acima como o tamanho base de fonte deste código (para facilitar manutenções). 1.5 x 10 = 15px */
     color: #484c55;
-    padding: 0 25px;
-    line-height: 100px;
-    /* quando trabalho com elementos "inline" existe um macete para alinhar verticalmente. Pois o vertical-align serve apenas para celulas em tabelas, não para texto em geral (inline trabalha como texto). The line-height property specifies the height of a line. Colocando a linha com a mesma altura do header para centralizar a linha neste.*/
-    display: inline-block;
-    /* Texto que também tem o comportamento de blocos herdado do elemento pai */
-    /* quando estiver usando display: inline no elemento pai, usar display: inline-block no filho para este herdar altura do pai. */
+    padding: 0 25px; /* Aumentar o padding para os lados tem 2 resultados: 1-Distanciar as palavras. 2-Sublinhado fica maior, ao invés do tamanho da palavra, fica no tamanho do "botão". */
+    display: inline-block; /* Junção do display:inline + display:block, melhor dos 2 mundos: elemento com comportamento de texto, mas também consegue configurar largura e altura. */
+    line-height: 100px; /* Para configurar a altura de uma linha. Muito usado para distanciar as linhas em um parágrafo. Neste caso usando para centralizar verticalmente o texto dentro da "caixa". Neste caso similar ao vertical-align das celulas de tabelas. */
 }
 .menu a:hover{
     background-color: #f8f9fb;
