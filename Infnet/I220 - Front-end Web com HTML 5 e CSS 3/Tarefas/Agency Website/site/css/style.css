@@ -93,9 +93,146 @@ header{
     padding: 0 25px; /* Aumentar o padding para os lados tem 2 resultados: 1-Distanciar as palavras. 2-Sublinhado fica maior, ao invés do tamanho da palavra, fica no tamanho do "botão". */
     display: inline-block; /* Junção do display:inline + display:block, melhor dos 2 mundos: elemento com comportamento de texto, mas também consegue configurar largura e altura. */
     line-height: 100px; /* Para configurar a altura de uma linha. Muito usado para distanciar as linhas em um parágrafo. Neste caso usando para centralizar verticalmente o texto dentro da "caixa". Neste caso similar ao vertical-align das celulas de tabelas. */
-}
+    transition: background-color 0.8s;   /* Propriedade nova do CSS3. Funcionalidades novas são lançadas junto com os kits acima (que garantem o funcionamento se a 1a linha não funcionar) */
+        -webkit-transition: background-color 0.8s; /* Prefixo do Chrome e Safari */
+        -o-transition: background-color 0.8s;     /* Prefixo do Opera */
+        -moz-transition: background-color 0.8s;     /* Prefixo do Mozila Firefox */        
+        -ms-transition: background-color 0.8s     /* Prefixo do IE */
+
+    }
 .menu a:hover{
+    /* background-color: yellow; */
     background-color: #f8f9fb;
     color: #49cbcd;
     border-bottom: 2px solid #49cbcd;
+}
+.menu .active{
+    background-color: #f8f9fb;
+    color: #49cbcd;
+    border-bottom: 2px solid #49cbcd;
+        /* se usar apenas ".active" a cor que iria valer seria do elemento com maior expecificidade, o ".menu o". Portanto, usar ".menu .active" para concorrer com a expecificidade do ".menu a" que possui outro "color". Ou usar "!important" no final da linha cuja propriedade se queira sobressair  */
+}
+.slider1{
+    background-image: url('../img/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 565px;
+    padding-top: 140px;
+    box-sizing: border-box;
+}
+.clear{
+    clear: both;
+}
+.banner{
+    text-align: center;
+}
+.banner h2{
+    font-size: 6.3em;
+    font-weight: 600;
+    color: #FFF;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.16); /* deslocamento-x | deslocamento-y | raio-de-desfoque | cor */
+    margin-bottom: 50px;
+   
+}
+.banner p{
+    font-size: 2.3em;
+    color: #FFF;
+    padding: 0 30%;
+    line-height: 30px;
+    margin-bottom: 65px;
+    /* Preferivel empurrar blocos de cima para baixo para evitar problemas. */
+}
+.banner a{
+    text-decoration: none;
+    color: #fff;
+    border: 3px solid #FFF;
+    font-weight: 600;
+    font-size: 2.6em;
+    border-radius: 5px;
+    padding: 20px 50px;
+}
+.banner a:hover{
+    background-color: #FFF;
+    color: #49cbcd;
+}
+.box4{
+    float: left;
+    width: 25%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+#services {
+    padding: 105px 0 100px;
+    overflow: hidden;     /* Acerta / coloca elementos filho dentro do pai. A propriedade overflow especifica quando o conteúdo (filho) de um elemento de nível de bloco deve ser cortado, exibido com barras de rolagem ou se transborda do elemento. Porém neste caso, o hidden ao invés de esconder o conteúdo, neste caso o pai passa a respeitar a altura dos elementos filhos, colocando eles dentro do pai.*/
+    /* background-color: yellow; */
+
+}
+.text-center{
+    text-align: center;
+}
+.bola{
+    width: 105px;
+    height: 105px;
+    border: 3px solid #49cbcd;
+    margin: 0 auto 50px; /* O "0 auto" para centralizar os elementos blocos neste local */
+    /* display: inline-block; */     /* Para centralizar os elementos blocos neste local, também poderia usar "display: inline-block;" para ele pegar as configurações do texto. Mas não é bom mudar o display de elementos bloco, pois algumas futuras propriedades podem não funcionar */
+    border-radius: 50%;
+    
+} 
+.bola i{
+    color: #49cbcd;
+    font-size: 4.0em;
+    line-height: 105px;
+    transition: transform 0.5s;
+
+}
+.bola i:hover{
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+
+}
+#services h2{
+    font-size: 2.2em;
+    color: #4e525d;
+    margin-bottom: 30px;
+}
+#services p{
+    font-size: 1.4em;
+    color: #4e525d;
+    margin-bottom: 25px;
+    line-height: 25px;
+}
+#services a{
+    font-size: 1.4em;
+    background-color: #49cbcd;
+    color: #FFF;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 10px 12px;
+}
+.titulo {
+    font-size: 4.2em;
+    color: #4e525d;
+    text-align: center;
+    margin-bottom: 60px;
+}
+#portifolio{
+    background-color: #F1F1F1;
+    padding: 60px 0 100px; /* superior | horizontal | inferior */
+}
+.box3{
+    float: left;
+    width: 33.333%;
+    padding: 0px 0px 30px; /* superior | horizontal | inferior */
+    box-sizing: border-box;
+
+}
+#portifolio img{
+    max-width: 92%; /* Diminuindo as fotos que estavam menor do que a moldura. */
+}
+#portifolio img:hover{
+    box-shadow: 0 0 5px #000;
 }

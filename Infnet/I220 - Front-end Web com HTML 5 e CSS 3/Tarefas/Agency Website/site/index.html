@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Agengy Website</title>
+    <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -17,67 +18,74 @@
             </div>
             <nav class="menu">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="#">Service</a></li>
                     <li><a href="#">Portifolio</a></li>
                     <li><a href="#">Team</a></li>
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Contact</a></li>
+                    <!-- O "display: inline-block" considera um Enter como um caractere. Para retirar esse caracter, precisa colocar todos os "li" juntos na mesma linha -->
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-        <section class="banner">
-            <div class="slider">
-                <h2>This is a main heading</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing </p>
-                <a href="#">Learn More</a>
+        <section class="banner clear">
+            <div class="slider1">
+                <div class="container">
+                    <h2>This is a main heading</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing </p>
+                    <a href="#">Learn More</a>
+                </div>
             </div>
         </section>
         <section id="services">
-            <article class="box4">
+            <div class="container">
+            <article class="box4 text-center">
                 <div class="bola">
-                    <p>foguete</p>
+                    <i class="fa-solid fa-rocket"></i>
                 </div>
                 <h2>Custom Designs</h2>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                 <a href="#">Read More</a>
             </article>
-            <article class="box4">
+            <article class="box4 text-center">
                 <div class="bola">
-                    <p>tela</p>
+                    <i class="fa-solid fa-desktop"></i>
                 </div>
                 <h2>Web Design</h2>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                 <a href="#">Read More</a>
             </article>
-            <article class="box4">
+            <article class="box4 text-center">
                 <div class="bola">
-                    <p>lampada</p>
+                    <i class="fa-solid fa-lightbulb"></i>                    
                 </div>
                 <h2>Blog Pages</h2>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                 <a href="#">Read More</a>
             </article>
-            <article class="box4">
+            <article class="box4 text-center">
                 <div class="bola">
-                    <p>mobile</p>
+                    <i class="fa-solid fa-mobile-screen"></i>
                 </div>
                 <h2>Mobile Friendly</h2>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                 <a href="#">Read More</a>
             </article>
+            </div>
         </section>
-        <section id="portifolio">
-            <h2>Portifolio</h2>
-            <article class="box3"><a href="#"><img src="img/portfolio01.jpg" alt="Foto 1"></a></article>
-            <article class="box3"><a href="#"><img src="img/portfolio02.jpg" alt="Foto 2"></a></article>
-            <article class="box3"><a href="#"><img src="img/portfolio03.jpg" alt="Foto 3"></a></article>
-            <article class="box3"><a href="#"><img src="img/portfolio04.jpg" alt="Foto 4"></a></article>
-            <article class="box3"><a href="#"><img src="img/portfolio05.jpg" alt="Foto 5"></a></article>
-            <article class="box3"><a href="#"><img src="img/portfolio06.jpg" alt="Foto 6"></a></article>
-            <a href="#">See all works</a>
+        <section id="portifolio" class="clear">
+            <div class="container">
+                <h2 class="titulo">Portifolio</h2>
+                <article class="box3"><a href="#"><img src="img/portfolio01.jpg" alt="Foto 1"></a></article>
+                <article class="box3"><a href="#"><img src="img/portfolio02.jpg" alt="Foto 2"></a></article>
+                <article class="box3"><a href="#"><img src="img/portfolio03.jpg" alt="Foto 3"></a></article>
+                <article class="box3"><a href="#"><img src="img/portfolio04.jpg" alt="Foto 4"></a></article>
+                <article class="box3"><a href="#"><img src="img/portfolio05.jpg" alt="Foto 5"></a></article>
+                <article class="box3"><a href="#"><img src="img/portfolio06.jpg" alt="Foto 6"></a></article>
+                <a href="#">See all works</a>
+            </div>
         </section>
         <section id="team">
             <h2>Team</h2>
@@ -241,4 +249,5 @@
         </div>
     </footer>
 </body>
+
 </html>
