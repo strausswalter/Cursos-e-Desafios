@@ -165,7 +165,6 @@ header{
     padding: 105px 0 100px;
     overflow: hidden;     /* Acerta / coloca elementos filho dentro do pai. A propriedade overflow especifica quando o conteúdo (filho) de um elemento de nível de bloco deve ser cortado, exibido com barras de rolagem ou se transborda do elemento. Porém neste caso, o hidden ao invés de esconder o conteúdo, neste caso o pai passa a respeitar a altura dos elementos filhos, colocando eles dentro do pai.*/
     /* background-color: yellow; */
-
 }
 .text-center{
     text-align: center;
@@ -184,7 +183,6 @@ header{
     font-size: 4.0em;
     line-height: 105px;
     transition: transform 0.5s;
-
 }
 .bola i:hover{
     transform: rotate(-45deg);
