@@ -234,3 +234,7 @@ header{
 #portifolio img:hover{
     box-shadow: 0 0 5px #000;
 }
+.btn-portfolio{
+    background-color: #49cbcd;
+    color: #FFF;
+}
