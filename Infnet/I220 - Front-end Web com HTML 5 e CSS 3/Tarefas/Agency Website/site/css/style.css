@@ -237,4 +237,84 @@ header{
 .btn-portfolio{
     background-color: #49cbcd;
     color: #FFF;
+    font-size: 2.4em;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 25px 40px;
+    display: inline-block;
+    margin-top: 15px;
+}
+.btn-portfolio:hover{
+    background-color: #484c55;
+    box-shadow: 0 0 5px #000;
+}
+#team{
+    padding: 100px 0 110px;
+    /* background-color: yellow; */
+    overflow: hidden;
+}
+#team img{
+    border-radius: 50%;
+    margin-bottom: 70px;
+    border: 1px solid transparent; /* Acrescentei uma borda transparente para deixa-la sólida no img:hover (e não mexer com o resto) */
+    transition: all 0.5s;
+}
+#team img:hover{
+    /* transition: all 0.5s; Acrescentado no elemento pai, pois o efeito fica na entrada (do hover) e na saída. Assim, o resultado fica melhor*/ 
+    border: 1px solid #4e525d;
+    box-shadow: 0 0 5px #4e4e4e;
+    cursor: pointer;
+}
+#team h3{
+    font-size: 2.2em;
+    color: #4e525d;
+    margin-bottom: 15px;
+}
+#team h4{
+    font-size: 2.0em;
+    color: #4e525d;
+    margin-bottom: 25px;
+}
+#team p{
+    font-size: 1.4em;
+    color: #4e525d;
+    line-height: 25px;
+}
+#price{
+    background-color: #F1F1F1;
+    padding: 120px 0 100px;
+    overflow: hidden;
+}
+#price table{
+    /* border: 1px solid transparent; */
+    width: 96%;
+    margin: 0 2%;
+}
+#price td, #price th{
+    border: 2px solid #F1F1F1;
+    text-align: center;
+    vertical-align: middle;
+}
+#price th{
+    font-size: 2.6em;
+    color: #FFF;
+    background-color: #485460;
+    height: 75px;
+}
+#price td{
+    height: 50px;
+    font-size: 1.4em;
+    color: #8c9299;
+    background-color: #FFF;
+}
+#price tr:nth-child(2) td{
+    color: #485460;
+    font-size: 2.0em;
+    background-color: #f8f9fb;
+    height: 70px;
+}
+#price tr:last-child td{
+    background-color: #f8f9fb;
+    height: 100px;
 }
