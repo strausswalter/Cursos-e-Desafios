@@ -290,7 +290,18 @@ header{
     /* border: 1px solid transparent; */
     width: 96%;
     margin: 0 2%;
+    transition: transfor 0.3s;
 }
+#price table:hover{
+    transform:scale(1.02);
+    cursor: pointer;
+}
+
+#price table:hover th,
+#price table:hover tr:last-child a {
+    background-color: #49cbcd;
+}
+
 #price td, #price th{
     border: 2px solid #F1F1F1;
     text-align: center;
@@ -316,5 +327,19 @@ header{
 }
 #price tr:last-child td{
     background-color: #f8f9fb;
-    height: 100px;
+    height: 100px--;
 }
+#price .btn-table{
+    background-color: #788492;
+    color: #fff;
+    border-radius: 3px;
+    padding: 12px 50px;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+}
+/* 
+.bg-verde{
+    background-color: #49cbcd !important;
+}
+ */
