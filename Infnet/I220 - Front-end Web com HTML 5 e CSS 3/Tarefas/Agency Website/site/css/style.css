@@ -22,7 +22,7 @@ del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
+fieldset, form, label, legend, input, textarea, select,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
@@ -338,8 +338,256 @@ header{
     font-weight: 600;
     text-decoration: none;
 }
+#depoimentos{
+    padding: 150px 0 110px;
+    text-align: center;
+
+}
+#depoimentos p{
+    font-size: 1.9em;
+    color: #4e525d;
+    line-height: 30px;
+    padding: 0 20%;
+    margin-bottom: 50px;
+}
+#depoimentos h3{
+    font-size: 2.1em;
+    color: #9a8faf;
+
+}
+footer{
+    background-image: url(../img/bg-contato.jpg);
+    background-repeat: no-repeat;
+    padding: 115px 0 100px;
+    overflow: hidden;
+    background-size: cover; /* Para a imagem cobrir o resto da tela (imagem era pequena) */
+
+}
+.box2{
+    float: left;
+    width: 50%;
+
+}
+.text-white{
+    color: #FFF;
+}
+footer h3{
+    color: #FFF;
+    font-size: 2.4em;
+    margin-bottom: 15px;
+}
+footer p{
+    font-size: 1.4em;
+    color: rgba(255,255,255,0.5);
+    line-height: 20px;
+    padding-right: 15%;
+    margin-bottom: 40px;
+}
+ul.socialmedia li{
+    float: left;
+}
+ul.socialmedia a{
+    color: #FFF;
+    background-repeat: no-repeat;
+    width: 42px;
+    height: 42px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+.facebook{
+    background-image: url(../img/ico-facebook.png);
+}
+.twitter{
+    background-image: url(../img/ico-twitter.png);
+}
+.google{
+    background-image: url(../img/ico-googleplus.png);
+}
+
+
+.facebook:hover{
+    background-image: url(../img/ico-facebook-pb.png);
+}
+.twitter:hover{
+    background-image: url(../img/ico-twitter-pb.png);
+}
+.google:hover{
+    background-image: url(../img/ico-googleplus-pb.png);
+}
+.address a, .address span{
+    text-decoration: none;
+    color: #bface2;
+    line-height: 25px;
+    font-size: 1.4em;
+}
+#contact textarea {
+    display: block;
+}
+#contact input[type=text],
+#contact input[type="email"] {
+    width: 48%;
+    margin: 0 1% 10px;
+    /* margin-bottom: 10px; */
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1.6em;
+    color: #000;
+    outline: none;
+    border: 1px solid transparent;
+
+}
+#contact input[type="text"]:focus,
+#contact input[type="email"]:focus,
+#contact textarea:focus{
+    background-color: #5b5f32;
+    border: 1px solid #000;
+    box-shadow: 0 0 5px #fff;
+    
+}
+
+
+
 /* 
-.bg-verde{
-    background-color: #49cbcd !important;
+#contact input[type=text]:focus,
+#contact input[type="email"]:focus,
+#contact textarea:focus{
+    outline-color: #49cbcd;
+    border: 1px solid #000;
 }
  */
+#contact textarea{
+    width: 98%;
+    margin: 0 1% 10px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #000;
+    font-size: 1.6em;
+    height: 180px;
+    resize: none;
+    outline: none;
+    border: 1px solid transparent;
+
+}
+#contact input[type="submit"]{
+    background-color: #49cbcd;
+    color: #fff;
+    border-radius: 5px;
+    width: 170px;
+    height: 50px;
+    display: block;
+    float: right;
+    margin-right: 1%;
+    font-size: 2.2em;
+}
+
+
+
+/* Forma de estilizar o placeholder ( O atributo placeholder é uma pequena dica, uma pequena frase, uma palavra, que tem o intuito de ajudar o usuário a entender como ele deve preencher aquele formulário.)*/
+/*Chrome,Safari,Opera*/
+::-webkit-input-placeholder{
+    color:#c1c1c1;
+}
+/*Firefox 18-*/
+:-moz-placeholder{
+    color: #c1c1c1;
+}
+/*Firefox 19+*/
+::-moz-placeholder{
+    color:#c1c1c1;
+}
+/*IE10+*/
+:-ms-input-placeholder{
+    color:#c1c1c1;
+}
+
+/*----------------------------------------------
+Media Queries
+----------------------------------------------*/
+
+/*Para Dispositivos de 980px ou menos*/
+@media screen and (max-width: 980px){
+	.container {
+        width: 980px;
+    }
+    .info{
+        padding-left: 1%;
+        box-sizing: border-box;
+    }
+}
+
+/*Para Dispositivos de 768px ou menos*/
+@media screen and (max-width: 768px){
+	.container {
+        width: 100%;
+    }
+    .box4{
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+}
+
+/*Para Dispositivos de 480px ou menos*/
+@media screen and (max-width: 480px){
+	.logo {
+        width: 150px;
+        margin: 0 auto;
+        float: none;
+    }
+	.menu a {
+        padding: 0 15px;
+    }
+    .banner{
+        font-size: 7px;
+    }
+    .banner p {
+        padding: 0 15%;
+    }
+    .box3{
+        width: 50%;
+    }
+    #price .box3{
+        width: 100%;
+    }
+    .box2{
+        width: 100%;
+    }
+    .address{
+        margin-bottom: 25px;
+    }
+    .socialmedia{
+        width: 156px;
+        margin: 0 auto;
+    }
+    #contact input[type="submit"]{
+        float: none;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .box4{
+        width: 100%;
+    }
+}
+
+
+/*Para Dispositivos de 320px ou menos*/
+@media screen and (max-width: 320px){	
+	.menu ul{
+        text-align: center;
+    }	
+    .box4, .box3{
+        width: 100%;
+    }
+    #depoimentos{
+        font-size: 8px;
+    }
+    #depoimentos p{
+        padding: 0 5%;
+    }
+}
+
