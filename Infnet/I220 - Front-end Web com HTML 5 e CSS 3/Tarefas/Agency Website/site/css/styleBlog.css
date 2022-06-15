@@ -1,0 +1,132 @@
+/* Importar fontes na 1a linha do CSS, como boa pratica */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+/* _______________________________________________ */
+
+
+
+/* Reset styles CSS */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    font-family: 'Open Sans', sans-serif;  /* Acrescentei a familia de fontes padrão desta pagina */
+
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-size: 10px; /* informado tamanho base de fonte de 10x. Restante do codigo irá se referenciar a este tamanho de fonte usando a unidade de medida "em" que multiplica este valor. Facilita manutenções futuras*/
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* _______________________________________________ */
+
+
+.container{
+    width: 1170px;
+    margin: 0 auto;
+    /* background-color: blue; */
+}
+
+header{
+    height: 100px;
+    width: 100%;
+    /* background-color: red; */
+}
+.logo{
+    float: left;
+}
+.menu{
+    float: right;
+}
+.menu li{
+    display: inline;
+}
+.menu a{
+    text-decoration: none; /* Para retirar o sublinhado dos links. A propriedade text-decoration do CSS é usada para definir a formatação de  underline, overline, line-through ou blink. As decorações underline e overline são posicionadas abaixo e acima do texto (respectivamente), e line-through cortando-o. */
+    font-size: 1.5em; /* Esta fonte terá 1.5x do Body{font-size: 10px;} expecificado mais acima como o tamanho base de fonte deste código (para facilitar manutenções). 1.5 x 10 = 15px */
+    color: #484c55;
+    padding: 0 25px; /* Aumentar o padding para os lados tem 2 resultados: 1-Distanciar as palavras. 2-Sublinhado fica maior, ao invés do tamanho da palavra, fica no tamanho do "botão". */
+    display: inline-block; /* Junção do display:inline + display:block, melhor dos 2 mundos: elemento com comportamento de texto, mas também consegue configurar largura e altura. */
+    line-height: 100px; /* Para configurar a altura de uma linha. Muito usado para distanciar as linhas em um parágrafo. Neste caso usando para centralizar verticalmente o texto dentro da "caixa". Neste caso similar ao vertical-align das celulas de tabelas. */
+    transition: background-color 0.8s;   /* Propriedade nova do CSS3. Funcionalidades novas são lançadas junto com os kits acima (que garantem o funcionamento se a 1a linha não funcionar) */
+        -webkit-transition: background-color 0.8s; /* Prefixo do Chrome e Safari */
+        -o-transition: background-color 0.8s;     /* Prefixo do Opera */
+        -moz-transition: background-color 0.8s;     /* Prefixo do Mozila Firefox */        
+        -ms-transition: background-color 0.8s     /* Prefixo do IE */
+    }
+.menu a:hover{
+    /* background-color: yellow; */
+    background-color: #f8f9fb;
+    color: #49cbcd;
+    border-bottom: 2px solid #49cbcd;
+}
+.menu .active{
+    background-color: #f8f9fb;
+    color: #49cbcd;
+    border-bottom: 2px solid #49cbcd;
+        /* se usar apenas ".active" a cor que iria valer seria do elemento com maior expecificidade, o ".menu o". Portanto, usar ".menu .active" para concorrer com a expecificidade do ".menu a" que possui outro "color". Ou usar "!important" no final da linha cuja propriedade se queira sobressair  */
+}
+.clear{
+    clear: both;
+}
+.slider1{
+    background-image: url('../img/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 80%; 
+    height: 176px;
+    padding-top: 74px;
+    box-sizing: border-box;
+}
+.banner{
+    text-align: center;
+}
+.banner h2{
+    font-size: 4.2em;
+    font-weight: 600;
+    color: #FFF;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.16); /* deslocamento-x | deslocamento-y | raio-de-desfoque | cor */
+   
+}
