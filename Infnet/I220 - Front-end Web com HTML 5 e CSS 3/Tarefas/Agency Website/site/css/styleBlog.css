@@ -130,3 +130,16 @@ header{
     text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.16); /* deslocamento-x | deslocamento-y | raio-de-desfoque | cor */
    
 }
+
+
+.container section{
+background-color: yellow;
+float: left;
+width: 831px;
+
+}
+.container aside{
+    background-color: aqua;
+    float: right;
+    width: 271px;
+}
