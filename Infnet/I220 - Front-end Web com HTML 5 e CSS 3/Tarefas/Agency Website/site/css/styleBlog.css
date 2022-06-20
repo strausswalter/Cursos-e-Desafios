@@ -66,7 +66,6 @@ table {
 .container{
     width: 1170px;
     margin: 0 auto;
-    /* background-color: blue; */
 }
 
 header{
@@ -133,62 +132,111 @@ header{
 }
 
 
-.container section{
-background-color: yellow;
-float: left;
-width: 831px;
 
-}
+
+.container section{
+    background-color: yellow;
+    float: left;
+    width: 831px;
+    }
 .container aside{
     background-color: aqua;
     float: right;
-    width: 271px;
+    width: 270px;
 }
+
+
+
+
+
+.boxDataArtigo{
+    float: left;
+    width: 70px;
+    height: 292px;
+    margin-right: 30px;
+    background-color: black;
+}
+
+.boxArtigo{
+    background-color: olive;
+    float: left;
+    width: 731px;
+    height: 292px;
+
+
+}
+
+
+
+
+
 .dataArtigo{
     background-color: #44c0c2;
-    float: left;
-    width: 71px;
     height: 103px;
-    margin-right: 30px;
     text-align: center;
     color: #FFF;
-    padding: 19px 0;
+    padding: 17px 0;
     box-sizing: border-box;
-
 }
 .dataArtigo h2{
     font-size: 3.0em;
     font-weight: 700;
-
 }
 .dataArtigo h3{
     font-size: 1.7em;
+    line-height: 20px;
 }
 .dataArtigo h4{
     font-size: 1.4em;
+    line-height: 20px;
 }
 .tituloArtigo h2{
     font-family: 'Kdam Thmor Pro', sans-serif;
     font-size: 2.6em;
-    margin-bottom: 26px;
+    margin-top: 10px;
+    margin-bottom: 21px;
 }
 .fotoArtigo img{
-        max-width:269px;
-        max-height:235px;
-        width: auto;
-        height: auto;
-        border-radius: 1%;
-        float: left;
-        margin-right: 28px;
+    max-width:269px;
+    max-height:235px;
+    width: auto;
+    height: auto;
+    border-radius: 1%;
+    float: left;
+    margin-right: 28px;
+    margin-bottom: 26px;
 }
-.textoArtigo p{
+
+.textoArtigo{
+    height:235px;
     font-size: 1.3em;
-    line-height: 25px;
+    line-height: 24px;
+    width: 434px;
+    background-color: red;
+    float: left;
 }
-.textoArtigo span{
+
+.ReadMore{
     font-size: 1.4em;
     color: #a88fd8;
 }
-.readMoreFinal{
-    font-family: 
+.boxRodapeArtigo{
+    height: 44px;
+    background-color: hotpink;
+    clear: both;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
