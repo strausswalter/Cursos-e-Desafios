@@ -162,6 +162,7 @@ header{
     float: left;
     width: 731px;
     height: 292px;
+    margin-bottom: 26px;
 
 
 }
@@ -204,7 +205,6 @@ header{
     border-radius: 1%;
     float: left;
     margin-right: 28px;
-    margin-bottom: 26px;
 }
 
 .textoArtigo{
@@ -216,24 +216,55 @@ header{
     float: left;
 }
 
-.ReadMore{
+.ReadMoreTxt{
     font-size: 1.4em;
     color: #a88fd8;
 }
+.ReadMoreTxt a{
+    text-decoration: none;
+
+}
 .boxRodapeArtigo{
-    height: 44px;
-    background-color: hotpink;
     clear: both;
+    height: 45px;
+    width: 731px;
+    /* background-color: hotpink; */
+    border-top: 1px solid #e9e9e9;
+    border-bottom:  1px solid #e9e9e9;
+    margin-left: 100px;
+    margin-bottom: 79px;
+}
+.boxRodapeArtigo li{
+   display: inline-block;
+   line-height: 45px;
+   font-size: 1.5em;
+   padding: 0 36px;
+
 }
 
 
 
+/* 
+ font-size: 1.5em; 
+ color: #484c55;
+ padding: 0 25px; 
+ display: inline-block; 
+ line-height: 100px;     Neste caso similar ao vertical-align das celulas de tabelas.
+ transition: background-color 0.8s;   
+     -webkit-transition: background-color 0.8s; 
+     -o-transition: background-color 0.8s;     
+     -moz-transition: background-color 0.8s;          
+     -ms-transition: background-color 0.8s     
+
+*/
 
 
 
+.boxRodapeArtigo a{
+    text-decoration: none;
+    color: #a88fd8;
 
-
-
+}
 
 
 
