@@ -7,17 +7,32 @@
     <title>Elemento document</title>
 </head>
 <body>
-    <form action="#">
+    <form action="#" method="post" name="form1">
 
         <label for="nome">Nome:</label>
-        <input type="text" name="txtName" id="nome">
+        <input type="text" name="txtNome" id="nome" placeholder="Digite seu nome">
+        <br>
+        <label for="email">Email:</label>
+        <input type="text" name="txtEmail" id="email">
+        <br><br>
+        <input type="button" value="Enviar" onclick="
+        
+            let nome = document.querySelector('#nome').value;
+            let email = document.querySelector('#email');
+            alert('Olá ' + nome + ' <' + email.value + '>, Seja bem vindo ao sistema');
+        
+        
+        
+        
+        
+        ">
 
     </form>
 
 
     <script>
 
-        
+
 
     </script>
 
