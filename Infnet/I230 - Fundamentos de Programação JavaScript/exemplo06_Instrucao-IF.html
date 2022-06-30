@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando Eventos</title>
+
+    <script>
+
+        //usuario digita as notas
+        //clica no botão calcular
+        //pego as notas 
+        //somar as notas e calcular a média
+        //mostrar a média na tela
+
+        window.addEventListener('load', function(){
+
+            let btn = document.querySelector('#btnCalcular');
+            btn.addEventListener('click', function(){
+            CalculaMedia();
+        
+        }); //fim do evento click
+
+            //no envento sair do compo texto, verificar se digitou um numero ou texto
+            let campoTeste = document.querySelector('#teste');
+            campoTeste.addEventListener('blur', function(){
+                let valCampo = parseFloat(document.querySelector('#teste').value);
+                if(isNaN(valCampo)){
+                    alert('Favor digitar um número no campo Teste!!')
+                    return false;
+                }
+        }); //fim do evento blur
+
+
+
+
+        });
+
+        function CalculaMedia(){
+            let teste = parseFloat( document.querySelector('#teste').value );
+            if(isNaN(teste)){
+                alert('Favor digitar número no campo teste')
+                return false;
+            }
+            let prova = parseFloat( document.querySelector('#prova').value );
+            if(isNaN(prova)){
+                alert('Favor digitar número no campo prova')
+                return false;
+            }
+            let media = (teste + prova) / 2;
+
+            alert('A média do aluno é: ' + media); 
+
+            document.querySelector('#resultado').innerHTML = 'A média do aluno é: ' + media;
+
+        }//Fim do CalculaMeida()
+
+    </script>
+
+</head>
+<body>
+
+    <h2>Calculadora de Média</h2>
+
+    <form action="#" method="post">
+        <label for="teste">Nota do Teste:</label>
+        <input type="text" name="txtTeste" id="teste">
+        <br><br>
+        <label for="prova">Nota da Prova:</label>
+        <input type="text" name="txtProva" id="prova">
+        
+        <br><br>
+        <div id="resultado"></div>
+        <br><br>
+
+        <input type="button" value="Calcular" id="btnCalcular">
+
+    </form>
+    
+    
+    
+</body>
+</html>
