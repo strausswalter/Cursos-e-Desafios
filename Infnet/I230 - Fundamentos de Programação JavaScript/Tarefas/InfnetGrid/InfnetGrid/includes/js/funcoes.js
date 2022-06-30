@@ -1,19 +1,27 @@
+
 //Area de Mensagens:
 const _campoNomeObrigatorio = 'Campo Nome Obrigatório';
 const _campoCpfObrigatorio = 'Campo CPF Obrigatório';
 const _campoDtNascObrigatorio = 'Campo Data de Nascimento Obrigatório';
-const _campoLogradouroObrigatorio 'Campo Logradouro Obrigatório';
+const _campoLogradouroObrigatorio = 'Campo Logradouro Obrigatório';
 const _campoNumeroObrigatorio = 'Campo Numero Obrigatório';
 const _campoCidadeObrigatorio = 'Campo Cidade Obrigatório';
+//faltou bairro!!
 const _campoEmailObrigatorio = 'Campo Email Obrigatório';
 const _campoSenhaObrigatorio = 'Campo Senha Obrigatório';
-const _campoConfSenhaObrigatorio 'Campo Confirme sua Senha Obrigatório';
-
+const _campoConfSenhaObrigatorio = 'Campo Confirme sua Senha Obrigatório';
+const _SenhasDiferentes = 'Campo Senha e Confirme sua Senha estão diferentes';
+const _campoNumeroInvalido = 'Campo Número Inválido';
 
 window.addEventListener('load', function(){
+
     document.querySelector('#btnEnviar').addEventListener('click', function(){
-        ValidaCadastro();
-    })//Fim do evento de click do botão enviar
+
+        if (ValidaCadastro()){
+            //envia o form
+        };
+
+    });//Fim do evento de click do botão enviar
 });//Fim do evento de load da página
 
 function ValidaCadastro(){
@@ -46,7 +54,14 @@ function ValidaCadastro(){
     if (numero == ''){
         erroAlert += _campoNumeroObrigatorio + '\n';
         erroHtml += _campoNumeroObrigatorio + '<br/>';
+    } else if (isNaN(numero)){
+        erroAlert += _campoNumeroInvalido + '\n';
+        erroHtml += _campoNumeroInvalido + '<br/>';
     }
+
+
+
+
     let cidade = document.querySelector('#cidade').value;
     if(cidade == '') {
         erroAlert += _campoCidadeObrigatorio + '\n';
@@ -66,6 +81,9 @@ function ValidaCadastro(){
     if (confSenha == '') {
         erroAlert += _campoConfSenhaObrigatorio + '\n';
         erroHtml += _campoConfSenhaObrigatorio + '<br/>';
+    }else if(senha != confSenha){
+        erroAlert += _SenhasDiferentes + '\n';
+        erroHtml += _SenhasDiferentes + '<br/>';
     }
 
     if(erroAlert != ''){
