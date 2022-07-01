@@ -26,7 +26,7 @@ window.addEventListener('load', function(){
     let arrElem = document.querySelectorAll('input');
     //console.log(arrElem);
     for(i=0; i < (arrElem.length-1); i++){
-        console.log(arrElem[i]);
+        //console.log(arrElem[i]);
 
         arrElem[i].addEventListener('focus', function(){
             DestacaFocus(this.id);
@@ -53,7 +53,7 @@ window.addEventListener('load', function(){
 function DestacaSaida(id){
     //document.querySelector('#'+id).style.backgroundColor = '#FFF';
     let elem = document.querySelector('#'+id);
-    if(elem.value == ''){
+    if(elem.value == '' && elem.id != 'bairro'){
         elem.className = 'destacaErro';
     }else{
         elem.className = 'destacaNormal';
