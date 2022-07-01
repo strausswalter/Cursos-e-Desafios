@@ -6,7 +6,7 @@ const _campoDtNascObrigatorio = 'Campo Data de Nascimento Obrigatório';
 const _campoLogradouroObrigatorio = 'Campo Logradouro Obrigatório';
 const _campoNumeroObrigatorio = 'Campo Numero Obrigatório';
 const _campoCidadeObrigatorio = 'Campo Cidade Obrigatório';
-//faltou bairro!!
+//faltou bairro (campo não obrigatório)
 const _campoEmailObrigatorio = 'Campo Email Obrigatório';
 const _campoSenhaObrigatorio = 'Campo Senha Obrigatório';
 const _campoConfSenhaObrigatorio = 'Campo Confirme sua Senha Obrigatório';
@@ -22,7 +22,53 @@ window.addEventListener('load', function(){
         };
 
     });//Fim do evento de click do botão enviar
+
+    let arrElem = document.querySelectorAll('input');
+    //console.log(arrElem);
+    for(i=0; i < (arrElem.length-1); i++){
+        console.log(arrElem[i]);
+
+        arrElem[i].addEventListener('focus', function(){
+            DestacaFocus(this.id);
+        });
+        arrElem[i].addEventListener('blur', function(){
+            DestacaSaida(this.id);
+        });
+    
+
+    }
+
+    //document.querySelector('#nome').addEventListener('focus', function(){
+    //    DestacaFocus('nome');
+    //});
+    //document.querySelector('#nome').addEventListener('blur', function(){
+    //    DestacaSaida('nome');
+    //});
+
+
+
 });//Fim do evento de load da página
+
+
+function DestacaSaida(id){
+    //document.querySelector('#'+id).style.backgroundColor = '#FFF';
+    let elem = document.querySelector('#'+id);
+    if(elem.value == ''){
+        elem.className = 'destacaErro';
+    }else{
+        elem.className = 'destacaNormal';
+    }
+}//Fim do DestacaSaida()
+
+
+function DestacaFocus(id){
+    //document.querySelector('#'+id).style.backgroundColor = 'yellow';
+    document.querySelector('#'+id).className = 'destacaFocus';
+
+}//Fim do DestacaFocus()
+
+
+
 
 function ValidaCadastro(){
 
@@ -58,10 +104,6 @@ function ValidaCadastro(){
         erroAlert += _campoNumeroInvalido + '\n';
         erroHtml += _campoNumeroInvalido + '<br/>';
     }
-
-
-
-
     let cidade = document.querySelector('#cidade').value;
     if(cidade == '') {
         erroAlert += _campoCidadeObrigatorio + '\n';

@@ -666,6 +666,15 @@ footer a:hover {
 
 
 
+.destacaFocus {
+	background-color: #fafb90;
+}
+.destacaErro {
+	background-color: #f19a94;
+}
+.destacaNormal {
+	background-color: #FFF;
+}
 
 
 
