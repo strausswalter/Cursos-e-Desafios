@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Exemplo de While - Javascript</title>
+
+	<script>
+		function Tabuada() {
+			let numero = document.querySelector('#numero').value;
+			let tabuada = '<table border=1>';
+			
+				//do while executa pelo menos 1x. Esta é a única diferença do while.
+			for(let contador=0; contador<=10;contador++){
+				//Forma simples: 5x2=10
+				//tabuada += numero + ' x ' + contador + ' = ' + (numero * contador) + '<br>';
+
+				//Forma com tabela: 
+				//<table>
+				//  <tr>
+				//    <td>5</td>
+				//    <td>x</td>
+				//    <td>2</td>
+				//    <td>=</td>
+				//    <td>10/td>
+				//  </tr>
+				//</table>
+				tabuada += '<tr><td>' + numero + '</td><td> x </td><td>' + contador + '</td><td> = </td><td>' + (numero * contador) + '</td></tr>';
+			}
+			tabuada += '</table>';
+
+			document.querySelector('#divResultado').innerHTML = tabuada;
+		}
+
+		window.addEventListener('load', function(){
+			document.querySelector('#btnCalcula').addEventListener('click', function(){
+				Tabuada();
+			});
+		}); 
+	</script>
+
+</head>
+<body>
+	<h1>Exemplo de While - Javascript</h1>
+
+	<form action="" method="post">
+		<label for="tabuada">Escolha um número para gerar a tabuada:</label>
+		<input type="text" name="txtNumero" id="numero">
+
+		<input type="button" value="OK" id="btnCalcula">
+	</form>
+	<div id="divResultado"></div>
+
+</body>
+</html>
+
+
