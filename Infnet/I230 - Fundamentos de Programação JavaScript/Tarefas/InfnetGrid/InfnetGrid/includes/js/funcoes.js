@@ -19,6 +19,7 @@ window.addEventListener('load', function(){
 
         if (ValidaCadastro()){
             //envia o form
+            document.querySelector('#formCadastro').submit();
         };
 
     });//Fim do evento de click do botão enviar
