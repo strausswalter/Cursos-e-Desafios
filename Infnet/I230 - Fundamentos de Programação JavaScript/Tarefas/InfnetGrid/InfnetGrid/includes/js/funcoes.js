@@ -12,6 +12,7 @@ const _campoSenhaObrigatorio = 'Campo Senha Obrigatório';
 const _campoConfSenhaObrigatorio = 'Campo Confirme sua Senha Obrigatório';
 const _SenhasDiferentes = 'Campo Senha e Confirme sua Senha estão diferentes';
 const _campoNumeroInvalido = 'Campo Número Inválido';
+const _campoCpfInvalido = 'Campo CPF Inválido';
 
 window.addEventListener('load', function(){
 
@@ -86,6 +87,9 @@ function ValidaCadastro(){
     if(cpf == ''){
         erroAlert += _campoCpfObrigatorio + '\n';
         erroHtml += _campoCpfObrigatorio + '<br>';
+    } else if(!ValidaCpf(cpf)){
+        erroAlert += _campoCpfInvalido + '\n';
+        erroHtml += _campoCpfInvalido + '<br>';
     }
     let dtnasc = document.querySelector('#dtnasc').value;
     if(dtnasc == '') {
@@ -140,3 +144,76 @@ function ValidaCadastro(){
 
 
 }//Fim do ValidaCadastro()
+
+function ValidaCpf(pCpf){
+    //Criar variaveis
+    let soma, resto, dv1, dv2, i, j;
+
+    //Testo se o CPF tem 11 caracteres:
+    if(pCpf.length != 11){
+        return false;
+    }
+
+    //Testo se o numero de CPF é igual aos numeros inválidos:
+    if(
+        pCpf == 12345678909 ||
+        pCpf == 00000000000 ||
+        pCpf == 11111111111 ||
+        pCpf == 22222222222 ||
+        pCpf == 33333333333 ||
+        pCpf == 44444444444 ||
+        pCpf == 55555555555 ||
+        pCpf == 66666666666 ||
+        pCpf == 77777777777 ||
+        pCpf == 88888888888 ||
+        pCpf == 99999999999 ||){
+        return false;
+    }
+    
+    //Calculo do 1o Digito Verificador (forma manual):
+    //012345678910 (posições do CPF)
+    //08458188724 (ex. CPF)
+    soma = (pCpf.chartAt(0)*10) +
+                (pCpf.chartAt(1)*9) +
+                (pCpf.chartAt(2)*8) +
+                (pCpf.chartAt(3)*7) +
+                (pCpf.charAt(4)*6) + 
+                (pCpf.charAt(5)*5) + 
+                (pCpf.charAt(6)*4) + 
+                (pCpf.charAt(7)*3) + 
+                (pCpf.charAt(8)*2);
+    
+    resto = soma % 11;
+
+    if(resto <= 1){
+        dv1=0;
+    }else{
+        dv1=11-resto;
+    }
+
+    //Testar se dv1 digitado é igual ao dv1 encontrado
+    if(pCpf.charAt(9) != dv1){
+        return false;
+    }
+
+    //Calculo do 2o Digito Verificador (automatizado):
+    soma = 0, j = 11;
+    for(i=0; i<10; i++){
+        soma += (pCpf.charAt(i)*j);
+        j--;
+    }
+    resto = soma % 11;
+    dv2 = (resto <= 1) ? 0 : 11-resto;
+
+    //testo se dv2 digitado é igual ao dv2 encontrado:
+    if(pCpf.charAt(10) != dv2){
+        return false;
+    }
+
+    //passou pela validação:
+    return true;
+    
+
+    
+
+}//Fim do ValidaCpf()
