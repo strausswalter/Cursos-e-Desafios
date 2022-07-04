@@ -13,6 +13,7 @@ const _campoConfSenhaObrigatorio = 'Campo Confirme sua Senha Obrigatório';
 const _SenhasDiferentes = 'Campo Senha e Confirme sua Senha estão diferentes';
 const _campoNumeroInvalido = 'Campo Número Inválido';
 const _campoCpfInvalido = 'Campo CPF Inválido';
+const _campoEmailInvalido = 'Campo Email Inválido';
 
 window.addEventListener('load', function(){
 
@@ -118,7 +119,19 @@ function ValidaCadastro(){
     if(email == '') {
         erroAlert += _campoEmailObrigatorio + '\n';
         erroHtml += _campoEmailObrigatorio + '<br/>';
+    } else(!ValidaEmail(email)){
+        erroAlert += _campoEmailInvalido + '\n';
+        erroHtml += _campoEmailInvalido + '<br/>';
     }
+
+
+
+
+
+
+
+
+
     let senha = document.querySelector('#senha').value;
     if(senha == '') {
         erroAlert += _campoSenhaObrigatorio + '\n';
@@ -151,12 +164,12 @@ function ValidaCpf(pCpf){
 
     //Testo se o CPF tem 11 caracteres:
     if(pCpf.length != 11){
+       //console.log('Saiu!!!')
         return false;
     }
 
     //Testo se o numero de CPF é igual aos numeros inválidos:
-    if(
-        pCpf == 12345678909 ||
+    if(pCpf == 12345678909 ||
         pCpf == 00000000000 ||
         pCpf == 11111111111 ||
         pCpf == 22222222222 ||
@@ -166,7 +179,7 @@ function ValidaCpf(pCpf){
         pCpf == 66666666666 ||
         pCpf == 77777777777 ||
         pCpf == 88888888888 ||
-        pCpf == 99999999999 ||){
+        pCpf == 99999999999){
         return false;
     }
     
@@ -174,14 +187,14 @@ function ValidaCpf(pCpf){
     //012345678910 (posições do CPF)
     //08458188724 (ex. CPF)
     soma = (pCpf.chartAt(0)*10) +
-                (pCpf.chartAt(1)*9) +
-                (pCpf.chartAt(2)*8) +
-                (pCpf.chartAt(3)*7) +
-                (pCpf.charAt(4)*6) + 
-                (pCpf.charAt(5)*5) + 
-                (pCpf.charAt(6)*4) + 
-                (pCpf.charAt(7)*3) + 
-                (pCpf.charAt(8)*2);
+            (pCpf.chartAt(1)*9) +
+            (pCpf.chartAt(2)*8) +
+            (pCpf.chartAt(3)*7) +
+            (pCpf.charAt(4)*6) + 
+            (pCpf.charAt(5)*5) + 
+            (pCpf.charAt(6)*4) + 
+            (pCpf.charAt(7)*3) + 
+            (pCpf.charAt(8)*2);
     
     resto = soma % 11;
 
@@ -217,3 +230,55 @@ function ValidaCpf(pCpf){
     
 
 }//Fim do ValidaCpf()
+    
+
+
+
+
+
+    let posArroba = pEmail.indexOf('@');
+    let posPonto = pEmail.indexOf('.', posArroba); //pesquisa a posição do "." após a posição do "@"
+
+    //testo se o email possui um "@"
+    if(posArroba == -1){
+        return false;
+    }
+
+    //testo se o "@" é o primeiro caractere:
+    if(porArroba == 0){
+        return false;
+    }
+
+    //testar as 2 condições juntas acima (com apenas 1 if):
+    //if(porArroba <= 0){
+    //    return false;
+    //}
+
+
+
+    //testo se o @ é o ultimo caractere:
+        //012345678910 (indexOf começa com 0)
+        //1234567891011 (lenght começa com 1)
+        //marmar.com@
+    if(posArroba == pEmail.length-1){
+        return false;
+    }
+
+    //testo se tem um . após o @ (em qualquer posição após o @):
+        //mar@gmailcom
+        //12345678910 (posição)
+    if(posPonto < posArroba){
+        return false; //se não encontrar o ".", então retorna -1.
+    }
+    
+    //testo se o "." é o ultimo caractere:
+    if(posPonto == pEmail.length-1){
+        return false;
+    }
+    return true;
+
+
+function ValidaEmail(){
+
+
+}//Fim do ValidaEmail()
