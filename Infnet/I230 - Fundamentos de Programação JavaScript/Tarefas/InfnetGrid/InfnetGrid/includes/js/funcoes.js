@@ -14,6 +14,7 @@ const _SenhasDiferentes = 'Campo Senha e Confirme sua Senha estão diferentes';
 const _campoNumeroInvalido = 'Campo Número Inválido';
 const _campoCpfInvalido = 'Campo CPF Inválido';
 const _campoEmailInvalido = 'Campo Email Inválido';
+const _campoDtNascInvalido = 'Campo Data Nascimento Inválido';
 
 window.addEventListener('load', function(){
 
@@ -96,6 +97,9 @@ function ValidaCadastro(){
     if(dtnasc == '') {
         erroAlert += _campoDtNascObrigatorio + '\n';
         erroHtml += _campoDtNascObrigatorio + '<br/>';
+    } else if (!ValidaIdade(dtnasc)){
+        erroAlert += _campoDtNascInvalido + '\n';
+        erroHtml += _campoDtNascInvalido + '<br/>';
     }
     let logradouro = document.querySelector('#logradouro').value;
     if(logradouro == '') {
@@ -278,8 +282,34 @@ function ValidaCpf(pCpf){
     return true;
 
 
-function ValidaEmail(){
+function ValidaEmail(pDtNasc){
 
-    
+    //20/04/1998
+    //0123456789
+    let dia = pDtNasc.substring(0,2);//posições 0 e 1. Posição 2 não entra.
+    let mes = pDtNasc.substring(3,5);//posições 3 e 4. Posição 5 não entra.
+    let ano = pDtNasc.substring(6);//posição 6 em diante.
+
+    let dataAtual = new Date();
+    let idade = dataAtual.getFullYear() - ano;
+
+    //Testando se o usuário já fez aniversário no ano atual:
+    //ano: 2022, mês 03 (mes-1), dia:20
+    if(dataAtual < new Date(dataAtual.getFullYear(), mes-1, dia)){
+        idade--;
+    }
+
+    if(idade < 14){
+        return false;
+    }else{
+        return true;
+    }
+
+
 
 }//Fim do ValidaEmail()
+
+
+function ValidaIdade(pDtNasc){
+
+}
