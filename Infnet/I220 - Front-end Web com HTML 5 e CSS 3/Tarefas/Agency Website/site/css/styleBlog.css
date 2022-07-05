@@ -224,24 +224,46 @@ header{
     text-decoration: none;
 
 }
+
+
+.boxRodapeArtigo ul{
+   // text-align: center
+    
+}
 .boxRodapeArtigo{
     clear: both;
     height: 45px;
     width: 731px;
-    /* background-color: hotpink; */
+    background-color: hotpink;
     border-top: 1px solid #e9e9e9;
-    border-bottom:  1px solid #e9e9e9;
+    border-bottom:  100px solid #e9e9e9;
     margin-left: 100px;
-    margin-bottom: 79px;
 }
+
+
+
 .boxRodapeArtigo li{
    display: inline-block;
    line-height: 45px;
    font-size: 1.5em;
-   padding: 0 36px;
+   padding-right: 18px;
+   
 
 }
 
+.boxRodapeArtigo .txtRosa a{
+    text-decoration: none;
+    color: #a88fd8;
+    padding-right: 28px;
+
+
+
+}
+
+.boxRodapeArtigo .txtDecorNone a{
+
+text-decoration: none;
+}
 
 
 /* 
@@ -260,14 +282,67 @@ header{
 
 
 
-.boxRodapeArtigo a{
-    text-decoration: none;
-    color: #a88fd8;
 
+/*
+.share{
+    background-image: url(../img/ico-googleplus.png);
+}
+.twitter{
+    background-image: url(../img/ico-twitter.png);
+}
+.facebook{
+    background-image: url(../img/ico-facebook.png);
 }
 
+.share:hover{
+    background-image: url(../img/ico-googleplus-pb.png);
+}
+.twitter:hover{
+    background-image: url(../img/ico-twitter-pb.png);
+}
+
+.facebook:hover{
+    background-image: url(../img/ico-facebook-pb.png);
+}
+
+*/
+/*
+.listaPaginas li{
+    list-style-type: order;
+ 
+}
+
+.listaPaginas li:first-child {
+    list-style-type: none;
+}
+
+.listaPaginas li:last-child {
+    list-style-type: none;
+}*/
 
 
 
 
+.listaPaginas li{
+    display: inline;
 
+}
+.listaPaginas a{
+    text-decoration: none; /* Para retirar o sublinhado dos links. A propriedade text-decoration do CSS é usada para definir a formatação de  underline, overline, line-through ou blink. As decorações underline e overline são posicionadas abaixo e acima do texto (respectivamente), e line-through cortando-o. */
+    font-size: 2.5em; /* Esta fonte terá 1.5x do Body{font-size: 10px;} expecificado mais acima como o tamanho base de fonte deste código (para facilitar manutenções). 1.5 x 10 = 15px */
+    color: #484c55;
+    border: 1px solid #a88fd8;
+    border-radius: 50%;
+    //padding: auto auto;
+
+   padding: 8px 8px; /* Aumentar o padding para os lados tem 2 resultados: 1-Distanciar as palavras. 2-Sublinhado fica maior, ao invés do tamanho da palavra, fica no tamanho do "botão". */
+   box-sizing: border-box;
+
+   display: inline-block; /* Junção do display:inline + display:block, melhor dos 2 mundos: elemento com comportamento de texto, mas também consegue configurar largura e altura. */
+    line-height: 200px; /* Para configurar a altura de uma linha. Muito usado para distanciar as linhas em um parágrafo. Neste caso usando para centralizar verticalmente o texto dentro da "caixa". Neste caso similar ao vertical-align das celulas de tabelas. */
+    transition: background-color 0.8s;   /* Propriedade nova do CSS3. Funcionalidades novas são lançadas junto com os kits acima (que garantem o funcionamento se a 1a linha não funcionar) */
+        -webkit-transition: background-color 0.8s; /* Prefixo do Chrome e Safari */
+        -o-transition: background-color 0.8s;     /* Prefixo do Opera */
+        -moz-transition: background-color 0.8s;     /* Prefixo do Mozila Firefox */        
+        -ms-transition: background-color 0.8s     /* Prefixo do IE */
+    }
