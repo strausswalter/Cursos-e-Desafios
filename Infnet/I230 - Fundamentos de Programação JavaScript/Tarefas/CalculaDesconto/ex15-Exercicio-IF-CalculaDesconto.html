@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Exercício Calcula Desconto - Javascript</title>
+<style>
+	fieldset {width: 300px;}
+</style>
+<script src="./script.js"></script>
+</head>
+
+
+<body>
+	<h2>Exercício Operadores</h2>
+
+	<h3>Construa um formulário HTML que possua um campo para o usuário digitar o valor do salário e um botão submit que ao ser clicado calcule e imprima o valor do desconto de acordo com a tabela abaixo. 
+</h3>
+
+	<table border="1">
+		<tr><th>Salário</th><th>Desconto</th></tr>
+		<tr><td>Até R$ 1000</td><td>10%</td></tr>
+		<tr><td>De R$ 1001 até 2000</td><td>15%</td></tr>
+		<tr><td>De R$ 2001 até 3000</td><td>20%</td></tr>
+		<tr><td>Acima R$ 3001</td><td>25%</td></tr>
+	</table>
+	<hr/>
+	
+<form action="" method="post">
+	<fieldset><legend>Dados para Envio:</legend>
+	<label for="salario">Digite o Salário:</label><br/>
+    <input type="text" name="txtSal" id="salario"/>
+
+    <input type="button" value="Enviar" id="btnCalcula"/>
+
+    <div id="divResultado"></div>
+
+    </fieldset>
+</form>
+
+</body>
+</html>

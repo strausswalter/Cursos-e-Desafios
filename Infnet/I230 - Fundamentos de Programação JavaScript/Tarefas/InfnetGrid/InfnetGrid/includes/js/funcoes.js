@@ -29,11 +29,11 @@ window.addEventListener('load', function(){
 
     let arrElem = document.querySelectorAll('input');
     //console.log(arrElem);
-    for(i=0; i < (arrElem.length-1); i++){
+    for(i=0; i < (arrElem.length-1); i++){//Retirando o ultimo imput, por ser um botão ("length-1") 
         //console.log(arrElem[i]);
 
         arrElem[i].addEventListener('focus', function(){
-            DestacaFocus(this.id);
+            DestacaFocus(this.id); // Tem que usar "this.id". Não dá para usar "arrElem[i].id", pois no momento do click esta variavel já não existe mais (estes eventos ocorrem, e terminam, no load da pagina)
         });
         arrElem[i].addEventListener('blur', function(){
             DestacaSaida(this.id);
@@ -41,7 +41,7 @@ window.addEventListener('load', function(){
     
 
     }
-
+    //Fazendo com apenas o 1o input, para depois fazer em lote (acima)
     //document.querySelector('#nome').addEventListener('focus', function(){
     //    DestacaFocus('nome');
     //});
@@ -123,7 +123,7 @@ function ValidaCadastro(){
     if(email == '') {
         erroAlert += _campoEmailObrigatorio + '\n';
         erroHtml += _campoEmailObrigatorio + '<br/>';
-    } else(!ValidaEmail(email)){
+    } else if(!ValidaEmail(email)){
         erroAlert += _campoEmailInvalido + '\n';
         erroHtml += _campoEmailInvalido + '<br/>';
     }
@@ -238,7 +238,7 @@ function ValidaCpf(pCpf){
 
 
 
-
+function ValidaEmail(pEmail){
 
     let posArroba = pEmail.indexOf('@');
     let posPonto = pEmail.indexOf('.', posArroba); //pesquisa a posição do "." após a posição do "@"
@@ -280,9 +280,9 @@ function ValidaCpf(pCpf){
         return false;
     }
     return true;
+}//fim de ValidaEmail
 
-
-function ValidaEmail(pDtNasc){
+function ValidaIdade(pDtNasc){
 
     //20/04/1998
     //0123456789
@@ -312,9 +312,5 @@ function ValidaEmail(pDtNasc){
     return (idade >= 14);
 
 
-}//Fim do ValidaEmail()
+}//Fim do ValidaIdade()
 
-
-function ValidaIdade(pDtNasc){
-
-}
