@@ -289,22 +289,27 @@ function ValidaEmail(pDtNasc){
     let dia = pDtNasc.substring(0,2);//posições 0 e 1. Posição 2 não entra.
     let mes = pDtNasc.substring(3,5);//posições 3 e 4. Posição 5 não entra.
     let ano = pDtNasc.substring(6);//posição 6 em diante.
+    //let data = pDtNasc.split('/');
 
     let dataAtual = new Date();
     let idade = dataAtual.getFullYear() - ano;
 
     //Testando se o usuário já fez aniversário no ano atual:
-    //ano: 2022, mês 03 (mes-1), dia:20
+    //Comparar dataAtual com uma nova data montada abaixo (ano atual: 2022, mês de aniversario 03 (mes-1), dia de aniversário:20). No função "Date" o mês inicia com 0, portanto mês-1.
+    //30/06/2022 < 20/04/2022 ??
     if(dataAtual < new Date(dataAtual.getFullYear(), mes-1, dia)){
         idade--;
     }
 
-    if(idade < 14){
-        return false;
-    }else{
-        return true;
-    }
+    //if(idade < 14){
+    //    return false;
+    //}else{
+    //    return true;
+    //}
 
+    //return (idade < 14) ? false : true;
+
+    return (idade >= 14);
 
 
 }//Fim do ValidaEmail()
