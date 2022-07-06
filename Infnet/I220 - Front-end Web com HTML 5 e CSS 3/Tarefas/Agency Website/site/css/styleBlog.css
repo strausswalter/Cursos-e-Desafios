@@ -336,10 +336,10 @@ text-decoration: none;
     //padding: auto auto;
 
    padding: 8px 8px; /* Aumentar o padding para os lados tem 2 resultados: 1-Distanciar as palavras. 2-Sublinhado fica maior, ao invés do tamanho da palavra, fica no tamanho do "botão". */
-   box-sizing: border-box;
+    box-sizing: border-box;
 
    display: inline-block; /* Junção do display:inline + display:block, melhor dos 2 mundos: elemento com comportamento de texto, mas também consegue configurar largura e altura. */
-    line-height: 200px; /* Para configurar a altura de uma linha. Muito usado para distanciar as linhas em um parágrafo. Neste caso usando para centralizar verticalmente o texto dentro da "caixa". Neste caso similar ao vertical-align das celulas de tabelas. */
+    //line-height: 200px; /* Para configurar a altura de uma linha. Muito usado para distanciar as linhas em um parágrafo. Neste caso usando para centralizar verticalmente o texto dentro da "caixa". Neste caso similar ao vertical-align das celulas de tabelas. */
     transition: background-color 0.8s;   /* Propriedade nova do CSS3. Funcionalidades novas são lançadas junto com os kits acima (que garantem o funcionamento se a 1a linha não funcionar) */
         -webkit-transition: background-color 0.8s; /* Prefixo do Chrome e Safari */
         -o-transition: background-color 0.8s;     /* Prefixo do Opera */
