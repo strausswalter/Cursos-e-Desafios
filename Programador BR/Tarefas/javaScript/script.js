@@ -1,8 +1,21 @@
-// 
 
 
-let idade = 35;
+let nota1 = 8.0;
+let nota2 = 7;
 
+let media = (nota1+nota2)/2;
 
+let conceito = "Bom";
 
-console.log("Entre 20 e 30: " + (idade>20&&idade>30));
+switch(conceito){
+    case "Ótimo":
+        console.log("Ótimo!!!");
+        break;
+    case "Bom":
+        console.log("Bom!!!");
+        break;
+
+ default:
+ console.log("Regular!!!");
+
+}
