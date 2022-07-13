@@ -14,9 +14,10 @@
         //somar as notas e calcular a média
         //mostrar a média na tela
 
+        //Para usar o "<script>" dentro do <head> (ou de arquivo externo), preciso acrescentar o "window.addEventListener('load'" para aguardar o carregamento da página.Depois do load  o JavaScrit conhece o objeto "#btnCalcular".
         window.addEventListener('load', function(){
 
-            let btn = document.querySelector('#btnCalcular');
+            let btn = document.querySelector('#btnCalcular');//Dentro do "<head><script>" o JavaScript ainda nao conhece o objeto "#btnCalcular". Por isso tem que acrescentar o "window.addEventListener('load'" para aguardar o carregamento da página.
             btn.addEventListener('click', function(){
             CalculaMedia();
         
