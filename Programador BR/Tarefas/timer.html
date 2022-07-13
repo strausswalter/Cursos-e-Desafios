@@ -34,10 +34,13 @@
             setInterval(atualizarTexto, 3000);//vai rodar a função atualizarTexto (acrescentar um numero ao título) a cada 3s.
         };
 //Código para Título 3:
+        let interval;
         function iniciar(){
-
+            interval = setInterval(atualizarTexto, 1000);
         };
-
+        function parar(){
+            clearInterval(interval);//tenho que passar um intervalo como referencia
+        };
 
 
     </script>
