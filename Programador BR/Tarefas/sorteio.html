@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio</title>
+
+    <script>
+        let pessoas = ["Igor", "Jose", "Marcos", "Pamela", "Ana"];
+
+        function sortear(){
+            let np = pessoas.length //np: numero de pessoas (neste exemplo retorna 5)
+            let ns = Math.floor(Math.random() * np); //ns: numero sorteado. Usei "Math.floor" para evitar pegar um elemento que nao existe. Se for sorteado o numero 5, não posso colocar este numero na posição do array (que vai de 0 a 5 neste caso).  
+            document.querySelector('#d').innerHTML = "Vencedor Sorteio 1: " + pessoas[ns];
+        }
+
+        function sortear2(){
+            let np = 100;//np: numero de pessoas = 100
+            let ns = Math.round(Math.random() * np);
+            document.querySelector('#d2').innerHTML = "Sorteio 2 - Número Sorteado: " + ns;
+        };
+
+    </script>
+</head>
+<body>
+    <h1 id="d">Sorteio 1 </h1>
+    <button onclick="sortear()">Sorteio 1</button>
+
+    <br>
+    <br>
+    <h1 id="d2">Sorteio 2 </h1>
+    <button onclick="sortear2()">Sorteio 2</button>
+
+
+
+
+</body>
+</html>
