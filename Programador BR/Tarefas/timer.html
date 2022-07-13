@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+//Código para Titulo 1 mudar cor 1s após apertar o botão:
+        function mudarCor(){
+            let h = document.querySelector('#h01');
+            h.style.color = "blue";
+        };
+
+
+        function mudarTexto(){
+            let h = document.querySelector('#h01');
+            h.innerHTML = "Novo Título vai mudar a cor";
+
+            window.setTimeout( mudarCor , 1000); //Executa apenas 1x
+
+        };
+//Código para Título 2:
+        let numero = 0;
+
+        function atualizarTexto(){
+            let h = document.querySelector('#h02');
+            h.innerHTML += " " + numero;//vai acrescentar um numero ao título
+            numero++;
+        };
+
+        function mudarTexto2(){
+            setInterval(atualizarTexto, 3000);//vai rodar a função atualizarTexto (acrescentar um numero ao título) a cada 3s.
+        };
+//Código para Título 3:
+        function iniciar(){
+
+        };
+
+
+
+    </script>
+</head>
+<body>
+    
+<h1 id="h01">Título</h1>
+<input onclick="mudarTexto()" type="submit" value="Mudar">
+
+<h1 id="h02" >Título 2</h1>
+<input onclick="mudarTexto2()" type="button" value="Mudar">
+
+<h1 id="h03">Título 3</h1>
+<input onclick="iniciar()" type="submit" value="Iniciar">
+<input onclick="parar()" type="submit" value="Parar">
+
+
+
+
+</body>
+</html>
