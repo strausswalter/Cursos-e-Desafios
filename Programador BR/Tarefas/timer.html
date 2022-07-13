@@ -7,7 +7,8 @@
     <title>Document</title>
 
     <script>
-//Código para Titulo 1 mudar cor 1s após apertar o botão:
+//Código para Titulo 1 mudar cor 3s após apertar o botão:
+        let timer = 0;
         function mudarCor(){
             let h = document.querySelector('#h01');
             h.style.color = "blue";
@@ -18,10 +19,13 @@
             let h = document.querySelector('#h01');
             h.innerHTML = "Novo Título vai mudar a cor";
 
-            window.setTimeout( mudarCor , 1000); //Executa apenas 1x
+            timer = window.setTimeout( mudarCor , 3000); //Executa apenas 1x. Uso "timer =" apenas se for usar depois um botão com "clearTimeout".
 
         };
-//Código para Título 2:
+        function cancelar(){
+            clearTimeout(timer);
+        };
+//Código para Título 2: Acrescentar numeros ao título após apertar o botão
         let numero = 0;
 
         function atualizarTexto(){
@@ -34,9 +38,17 @@
             setInterval(atualizarTexto, 3000);//vai rodar a função atualizarTexto (acrescentar um numero ao título) a cada 3s.
         };
 //Código para Título 3:
+        let numero2 = 0;
         let interval;
+
+        function atualizarTexto3(){
+            let h03 = document.querySelector('#h03');
+            h03.innerHTML += " " + numero2;//vai acrescentar um 2 ao título
+            numero2++;
+        };
+
         function iniciar(){
-            interval = setInterval(atualizarTexto, 1000);
+            interval = setInterval(atualizarTexto3, 1000);
         };
         function parar(){
             clearInterval(interval);//tenho que passar um intervalo como referencia
@@ -49,6 +61,8 @@
     
 <h1 id="h01">Título</h1>
 <input onclick="mudarTexto()" type="submit" value="Mudar">
+<input onclick="cancelar()" type="submit" value="Cancelar">
+
 
 <h1 id="h02" >Título 2</h1>
 <input onclick="mudarTexto2()" type="button" value="Mudar">
