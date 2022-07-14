@@ -212,7 +212,7 @@ header{
 }
 
 .ReadMoreTxt{
-    font-size: 1.4em;
+    font-size: 14px;
     color: #a88fd8;
 }
 .ReadMoreTxt a{
@@ -390,6 +390,7 @@ footer table{
 .container aside form #subscribe{
     border: none;
     background-color: #49cbcd;
+    color: #fff;
     width: 170px;
     height: 40px;
     font-size: 16px;
