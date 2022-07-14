@@ -66,7 +66,10 @@ table {
 .container{
     width: 1170px;
     margin: 0 auto;
+    /* background-color: burlywood; */
 }
+
+
 
 header{
     height: 100px;
@@ -131,22 +134,17 @@ header{
    
 }
 
-
-
-
-.container section{
-    background-color: yellow;
-    float: left;
-    width: 831px;
-    }
 .container aside{
-    background-color: aqua;
+    /* background-color: aqua; */
     float: right;
     width: 270px;
 }
 
-
-
+.container section{
+    /* background-color: yellow; */
+    float: left;
+    width: 831px;
+    }
 
 
 .boxDataArtigo{
@@ -154,11 +152,11 @@ header{
     width: 70px;
     height: 292px;
     margin-right: 30px;
-    background-color: black;
+    /* background-color: black; */
 }
 
 .boxArtigo{
-    background-color: olive;
+    /* background-color: olive; */
     float: left;
     width: 731px;
     height: 292px;
@@ -167,12 +165,9 @@ header{
 
 }
 
-
-
-
-
 .dataArtigo{
     background-color: #44c0c2;
+    border-radius: 5px;
     height: 103px;
     text-align: center;
     color: #FFF;
@@ -212,7 +207,7 @@ header{
     font-size: 1.3em;
     line-height: 24px;
     width: 434px;
-    background-color: red;
+    /* background-color: red; */
     float: left;
 }
 
@@ -234,10 +229,11 @@ header{
     clear: both;
     height: 45px;
     width: 731px;
-    background-color: hotpink;
+    /* background-color: hotpink; */
     border-top: 1px solid #e9e9e9;
-    border-bottom:  100px solid #e9e9e9;
+    border-bottom:  1px solid #e9e9e9;
     margin-left: 100px;
+    margin-bottom: 100px;
 }
 
 
@@ -265,84 +261,347 @@ header{
 text-decoration: none;
 }
 
-
-/* 
- font-size: 1.5em; 
- color: #484c55;
- padding: 0 25px; 
- display: inline-block; 
- line-height: 100px;     Neste caso similar ao vertical-align das celulas de tabelas.
- transition: background-color 0.8s;   
-     -webkit-transition: background-color 0.8s; 
-     -o-transition: background-color 0.8s;     
-     -moz-transition: background-color 0.8s;          
-     -ms-transition: background-color 0.8s     
-
-*/
-
-
-
-
-/*
-.share{
-    background-image: url(../img/ico-googleplus.png);
-}
-.twitter{
-    background-image: url(../img/ico-twitter.png);
-}
-.facebook{
-    background-image: url(../img/ico-facebook.png);
-}
-
-.share:hover{
-    background-image: url(../img/ico-googleplus-pb.png);
-}
-.twitter:hover{
-    background-image: url(../img/ico-twitter-pb.png);
-}
-
-.facebook:hover{
-    background-image: url(../img/ico-facebook-pb.png);
-}
-
-*/
-/*
-.listaPaginas li{
-    list-style-type: order;
- 
-}
-
-.listaPaginas li:first-child {
-    list-style-type: none;
-}
-
-.listaPaginas li:last-child {
-    list-style-type: none;
-}*/
-
-
-
-
-.listaPaginas li{
-    display: inline;
+footer{
+    clear: both;
+    text-align: center;
+    font-size: 1.4em;
+    color: #7C7C7C;
+    /* margin-bottom: 50px;    */
+    border-top: 1px solid #e9e9e9;
 
 }
-.listaPaginas a{
-    text-decoration: none; /* Para retirar o sublinhado dos links. A propriedade text-decoration do CSS é usada para definir a formatação de  underline, overline, line-through ou blink. As decorações underline e overline são posicionadas abaixo e acima do texto (respectivamente), e line-through cortando-o. */
-    font-size: 2.5em; /* Esta fonte terá 1.5x do Body{font-size: 10px;} expecificado mais acima como o tamanho base de fonte deste código (para facilitar manutenções). 1.5 x 10 = 15px */
-    color: #484c55;
-    border: 1px solid #a88fd8;
+footer table{
+    margin: 46px auto 30px;
+}
+
+
+.facebook2 {
+    background-image: url('../img/ico-facebook.png');
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 48px;
+    display: block;
+    margin-right: 10px;
+    /* margin-bottom: 20px; */
+    border: 1px solid transparent;    
+}
+
+.facebook2:hover {
+    background-image: url('../img/ico-facebook-pb.png');
+    border: 1px solid #303030;
     border-radius: 50%;
-    //padding: auto auto;
+}
+.twitter2 {
+    background-image: url('../img/ico-twitter.png');
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 48px;
+    display: block;
+    margin-right: 10px;
+    /* margin-bottom: 20px; */
+    border: 1px solid transparent;
+}
 
-   padding: 8px 8px; /* Aumentar o padding para os lados tem 2 resultados: 1-Distanciar as palavras. 2-Sublinhado fica maior, ao invés do tamanho da palavra, fica no tamanho do "botão". */
-    box-sizing: border-box;
+.twitter2:hover {
+    background-image: url('../img/ico-twitter-pb.png');
+    border: 1px solid #303030;
+    border-radius: 50%;
+}
 
-   display: inline-block; /* Junção do display:inline + display:block, melhor dos 2 mundos: elemento com comportamento de texto, mas também consegue configurar largura e altura. */
-    //line-height: 200px; /* Para configurar a altura de uma linha. Muito usado para distanciar as linhas em um parágrafo. Neste caso usando para centralizar verticalmente o texto dentro da "caixa". Neste caso similar ao vertical-align das celulas de tabelas. */
-    transition: background-color 0.8s;   /* Propriedade nova do CSS3. Funcionalidades novas são lançadas junto com os kits acima (que garantem o funcionamento se a 1a linha não funcionar) */
-        -webkit-transition: background-color 0.8s; /* Prefixo do Chrome e Safari */
-        -o-transition: background-color 0.8s;     /* Prefixo do Opera */
-        -moz-transition: background-color 0.8s;     /* Prefixo do Mozila Firefox */        
-        -ms-transition: background-color 0.8s     /* Prefixo do IE */
-    }
+.google2 {
+    background-image: url('../img/ico-googleplus.png');
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 48px;
+    display: block;
+    margin-right: 10px;
+    /* margin-bottom: 20px; */
+    border: 1px solid transparent;
+}
+
+.google2:hover {
+    background-image: url('../img/ico-googleplus-pb.png');
+    border: 1px solid #303030;
+    border-radius: 50%;
+}
+
+
+.container aside #form1{
+    border: 1px solid #e9e9e9;
+    /* background-color: coral; */
+    height: 43px;
+    width: 100%;
+    /* font-weight: 270px; */
+    position: relative;
+    margin-bottom: 70px;
+}
+.container aside form #input1{
+    border: none;
+    width: 233px;
+    height: 100%;
+    font-size: 14px;
+
+}
+.container aside form #input1:focus{
+    outline: none;
+
+}
+
+
+.container aside form label{
+    /* float: right; */
+    position: absolute;
+    left: 86%;
+    font-size: 19px;
+    top: 12px;
+    /* padding-right: 10px; */
+    
+}
+.container aside h1{
+    font-size: 2.6em;
+    color: #414a5a;
+    margin-bottom: 31px;
+    /* background-color: #a88fd8; */
+}
+.redeSocial{
+    /* margin-bottom: 47px; */
+    height: 89px;
+    
+}
+
+.container aside #form2{
+    height: 171px;
+    width: 100%;
+    position: relative;
+} 
+
+.container aside form #input2{
+    border: 1px solid #e9e9e9;
+    width: 270px;
+    height: 43px;
+    font-size: 14px;
+    margin-bottom: 30px;
+
+}
+.container aside form #input2:focus{
+    outline: none;
+
+}
+.container aside form #subscribe{
+    border: none;
+    background-color: #49cbcd;
+    width: 170px;
+    height: 40px;
+    font-size: 16px;
+    margin-bottom: 57px;
+    border-radius: 2px;
+}
+.container aside .categories {
+    margin-bottom: 57px;
+    width: 100%;
+}
+
+.categories li {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 1.4em;    
+}
+
+.categories a {
+    text-decoration: none;    
+    color: #414A5A;
+}
+
+.categories i {
+    color: #49CBCD;
+    margin-right: 5pt;   
+}
+
+.categories li:hover {
+    background-color: #485460;    
+    border-radius: 10px;    
+    padding-left: 20px; 
+    box-sizing: border-box;      
+}
+
+.categories li:hover i {
+    color: #FFF;
+}
+
+.categories li:hover span {
+    color: #FFF;
+}
+
+.container aside .popular_post {
+    /* margin-bottom: 6em; */
+    width: 100%;
+
+}
+
+.popular_post img {
+    /* margin-bottom: 20px; */
+    /* position: absolute; */
+    max-width: 270px;
+    width: auto;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+.popular_post p {
+    color: #414A5A;
+    line-height: 30px;
+    font-size: 1.3em;
+    margin-bottom: 37px;
+    text-align: justify;
+}
+
+.popular_post a {
+    text-decoration: none;    
+}
+
+#left {
+    text-align: left;
+    float: left;
+    width: 50%;
+    color: #414A5A;    
+    font-size: 1.4em; 
+    margin-bottom: 62px;
+}
+
+#right a {
+    text-align: right;    
+    float: left;
+    width: 50%;
+    font-size: 1.4em;
+    color: #a88fd8;
+    margin-bottom: 62px;
+
+}
+
+
+.container aside .recentPost {
+    width: 100%;
+    margin-bottom: 57px;
+
+}
+
+.recentPost li {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 1.4em;    
+}
+
+.recentPost a {
+    text-decoration: none;    
+    color: #414A5A;
+}
+
+.recentPost i {
+    color: #49CBCD;
+    margin-right: 5pt;   
+}
+
+.recentPost li:hover {
+    background-color: #485460;    
+    border-radius: 10px;    
+    padding-left: 20px; 
+    box-sizing: border-box;      
+}
+
+.recentPost li:hover i {
+    color: #FFF;
+}
+
+.recentPost li:hover span {
+    color: #FFF;
+}
+
+
+.container aside .tags {
+    width: 100%;
+    /* background-color: brown; */
+
+}
+
+
+.tags a {
+    text-decoration: none;
+    color: #414A5A;
+    font-size: 1.4em;
+}
+
+.options {
+    width: 100%;
+}
+
+.container aside .boxTags {
+    padding: 12px 20px;
+    /* box-sizing: border-box; */
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #f8f9fb;
+    border-radius: 5px;    
+    float: left;
+}
+
+
+.container aside .boxTags:hover{
+    background-color: #49CBCD;
+    color: white;
+
+}
+.boxPagination{
+    /* background-color: red; */
+    margin-left: 100px;
+
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.pagination > a,
+.pagination > span {
+    background-color: #f6fafb;
+    color: #485460;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 17px;
+    /* margin: 0 3px 5px; */
+    margin: 0 auto 5px;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    position: relative;
+    font-family: Helvetica, Arial, sans-serif;
+}
+.pagination > span {
+    pointer-events: none;
+}
+.pagination svg {
+    height: 24px;
+    width: 24px;
+}
+.pagination > a:hover {
+    background-color: #485460;
+    color: #fff;
+}
+.pagination > a.page-active {
+    background-color: #485460;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+

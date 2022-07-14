@@ -45,6 +45,7 @@
                 </div>
             </div>
         </section>
+        
         <div class="container">
             <section>
                 <article>
@@ -54,8 +55,7 @@
                             <h3>Sep</h3>
                             <h4>2013</h4>
                         </div>
-                    </div>
-
+                    </div> 
 
                     <div class="boxArtigo">
                         <div class="tituloArtigo">
@@ -89,12 +89,7 @@
                         </ul>
                     </div>
                 </article>
-
-
-
-
-
-
+<!-- 2o artigo -->
                 <article>
                     <div class="boxDataArtigo">
                         <div class="dataArtigo">
@@ -137,7 +132,7 @@
                         </ul>
                     </div>
                 </article>
-
+<!-- 3o artigo: -->
 
                 <article>
                     <div class="boxDataArtigo">
@@ -182,7 +177,7 @@
                     </div>
                 </article>
 
-
+<!-- 4o artigo: -->
 
                 <article>
                     <div class="boxDataArtigo">
@@ -226,28 +221,47 @@
                         </ul>
                     </div>
                 </article>
-                                
-                    <div class="boxPagination">
-                        <div class="pagination">
-                            <a href="#" title="first page"><svg fill="currentColor"><path d="M17.59 18L19 16.59 14.42 12 19 7.41 17.59 6l-6 6zM11 18l1.41-1.41L7.83 12l4.58-4.59L11 6l-6 6z"/></svg></a>
-                            <a href="#" title="previous page"><svg fill="currentColor"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg></a>
-                            <a href="#">1</a>
-                            <a href="#" class="page-active">2</a>
-                            <a href="#">3</a>
-                            <span class="page-dots">...</span>
-                            <a href="#">6</a>
-                            <a href="#" title="next page"><svg fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg></a>
-                            <a href="#" title="last page"><svg fill="currentColor"><path d="M6.41 6L5 7.41 9.58 12 5 16.59 6.41 18l6-6zM13 6l-1.41 1.41L16.17 12l-4.58 4.59L13 18l6-6z"/></svg></a>
+            </section>
+
+            <section>
+                </article>
+                    <div class="boxDataArtigo">
+
+
+                        <!-- <div class="bola">
+                            <a href="#">&laquo;</a>
                         </div>
-                    </div>
+                        <div class="bola">
+                            <a href="#">1</a>
+                        </div>
+                        <div class="bola">
+                            <a href="#" class="active">2</a>
+                        </div>
+                        <div class="bola">
+                            <a href="#">3</a>
+                        </div>
 
+                            <div class="bola">
 
+                            <a href="#">4</a>
+                        </div>
 
+                            <div class="bola">
 
+                            <a href="#">5</a>
+                        </div>
 
+                            <div class="bola">
 
-                    <!-- <div class="boxListaPaginas">
-                        <div class="listaPaginas">
+                            <a href="#">76</a>
+                        </div>
+
+                            <div class="bola">
+
+                            <a href="#">&raquo;</a>
+                        </div> -->
+
+                            <!-- <div class="listaPaginas">
                             <ul>
                                 <li><a href="#"><i class="fa-solid fa-angle-left"></i></a></li>
                                 <li><a href="#">1</a></li>
@@ -259,10 +273,13 @@
                                 <li><a href="#">...</i></a></li>
                                 <li><a href="#">78</i></a></li>
                                 <li><a href="#"><i class="fa-solid fa-angle-right"></i></a></li>
+                                <a href="#" aria-label="Ir para a página 2" class="s-pagination-item s-pagination-button">2</a>
+
 
                             </ul>
-                        </div>
-                    </div> -->
+                            </div> -->
+                    </div>
+                </article>
             </section>
             <aside>
 
@@ -282,15 +299,15 @@
                         </tr>
                     </table>
                 </div>
+                
                 <form action="#" method="post" id="form2">
                     <input type="email" name="email" id="input2" placeholder="    Enter Your e-mail">
                     <br>
-                    <!-- <input type="submit" value="Subscribe" id="subscribe"> -->
-                    <input type="button" value="Subscribe" id="subscribe">
+                    <input type="submit" value="Subscribe" id="subscribe">
                 </form>
                 
                 <section class="categories">
-                    <h1>Categories</h1>    
+                    <h2>Categories</h2>    
                     <ul>
                         <li>
                             <a href="#">                             
@@ -315,7 +332,7 @@
                     </ul>
                 </section>
                 <section class="popular_post">
-                    <h1>Popular Post</h1>
+                    <h2>Popular Post</h2>
                     <img src="img/blog/imagem05.png" alt="Foto 05">
                     <p>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -329,7 +346,7 @@
                 </section>
 
                 <section class="recentPost">
-                    <h1>Recent Post</h1>
+                    <h2>Recent Post</h2>
                     <ul>
                         <li>
                             <a href="#">
@@ -360,7 +377,7 @@
                 </section>
 
                 <section class="tags clear">
-                    <h1>Tags</h1>
+                    <h2>Tags</h2>
                     <div class="options">
                         <a href="#" class="boxTags">design</a>
                         <a href="#" class="boxTags">development</a>
@@ -368,7 +385,10 @@
                         <a href="#" class="boxTags">creative</a>
                         <a href="#" class="boxTags">seo</a>
                         <a href="#" class="boxTags">advertisement</a>
-                        <a href="#" class="boxTags">life</a>
+
+
+
+
 
 
                         <!-- <div class="boxTags"><a href="#">design</a></div>
@@ -379,16 +399,17 @@
                         <div class="boxTags"><a href="#">advertisement</a></div>
                         <div class="boxTags"><a href="#">life</a></div> -->
                         <!-- <button class="boxTags"><a href="#">life</button> -->
+                        <a href="#" class="boxTags">life!</a>
                     </div>
                 </section>
-                </div>
-                  
+
+
             </aside>
-        </div>
+        </div> <!--fim do classe container do aside -->
 
     </main>
     <footer>
-        
+        <hr>
         <table>
             <tr>
                 <th><a href="#" class="facebook2"></a></th>
@@ -399,10 +420,6 @@
         <h2>
             Copyright © 2013 Designed by cssauthor.com
         </h2>
-        <br>
-        <br>
-        <br>
-
     </footer>
 
 
