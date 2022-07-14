@@ -236,15 +236,11 @@ header{
     margin-bottom: 100px;
 }
 
-
-
 .boxRodapeArtigo li{
    display: inline-block;
    line-height: 45px;
    font-size: 1.5em;
    padding-right: 18px;
-   
-
 }
 
 .boxRodapeArtigo .txtRosa a{
@@ -252,9 +248,18 @@ header{
     color: #a88fd8;
     padding-right: 28px;
 
-
-
 }
+.boxRodapeArtigo li{
+    color: #757b85;
+}
+.boxRodapeArtigo a.share{
+    color: #757b85;
+}
+.boxRodapeArtigo i{
+    color: #dde0e5;
+    font-size: 16px;
+}
+
 
 .boxRodapeArtigo .txtDecorNone a{
 
@@ -420,7 +425,7 @@ footer table{
 
 .categories li:hover {
     background-color: #485460;    
-    border-radius: 10px;    
+    border-radius: 3px;    
     padding-left: 20px; 
     box-sizing: border-box;      
 }
@@ -489,6 +494,7 @@ footer table{
 .recentPost li {
     width: 100%;
     padding: 15px 0;
+    box-sizing: border-box;
     font-size: 1.4em;    
 }
 
@@ -499,12 +505,14 @@ footer table{
 
 .recentPost i {
     color: #49CBCD;
-    margin-right: 5pt;   
+    margin-right: 5pt;
+    font-size: 5px;
+    vertical-align: middle;
 }
 
 .recentPost li:hover {
     background-color: #485460;    
-    border-radius: 10px;    
+    border-radius: 3px;    
     padding-left: 20px; 
     box-sizing: border-box;      
 }
