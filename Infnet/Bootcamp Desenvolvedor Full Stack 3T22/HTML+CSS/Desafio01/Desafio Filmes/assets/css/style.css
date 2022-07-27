@@ -1,29 +1,43 @@
 
-
-
-.boxBlack{
+html, body{
+    height: 100%;
+    width: 100%;
+  }
+  
+  .boxBlack{
     background-color: black;
-    max-width:700px;
     padding: 20px;
     font-size: 12px;
+    color: #fff;
+    height: 100%;
+    width: 100%;
   }
   
   header img{
     width: 500px;
     display: block;
     margin: 0px auto;
+    margin-bottom:30px;
   }
+  
   .boxCenter{
     width: 500px;
-      margin: 0px auto;
+    margin: 0px auto;
   
   }
+  
+  .boxCenter h1{
+    text-align: center;
+  }
+  
+  
+  
+  
   
   .boxLeft{
     display: block;
     width: 300px;
     float: left;
-    background: yellow;
     color: #fff;
     padding: 10px;
     box-sizing: border-box;
@@ -34,7 +48,6 @@
     display: block;
     width: 170px;
     float: right;
-    background: orange;
     padding: 10px;
     box-sizing: border-box;
     
@@ -47,4 +60,8 @@
   }
   .boxLeft span{
     color:
+  }
+  .sinopse{
+    width: 100%;
+    float: left;
   }
