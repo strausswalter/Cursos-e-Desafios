@@ -1,0 +1,50 @@
+
+
+
+.boxBlack{
+    background-color: black;
+    max-width:700px;
+    padding: 20px;
+    font-size: 12px;
+  }
+  
+  header img{
+    width: 500px;
+    display: block;
+    margin: 0px auto;
+  }
+  .boxCenter{
+    width: 500px;
+      margin: 0px auto;
+  
+  }
+  
+  .boxLeft{
+    display: block;
+    width: 300px;
+    float: left;
+    background: yellow;
+    color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    
+  }
+  
+  .boxRight{
+    display: block;
+    width: 170px;
+    float: right;
+    background: orange;
+    padding: 10px;
+    box-sizing: border-box;
+    
+  }
+  .boxLeft h1{
+    font-size: 12px;
+  }
+  .boxLeft h1 span{
+    color: #46d369; 
+  }
+  .boxLeft span{
+    color:
+  }
