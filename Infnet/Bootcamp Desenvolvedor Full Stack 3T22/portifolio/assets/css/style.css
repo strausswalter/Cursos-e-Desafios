@@ -71,13 +71,13 @@ header{
 }
 
 
-li{
+nav li{
     display: block;
     height: 62px;
     list-style: none;
     padding: 0 30px;
 }
-a{
+nav a{
     display: block;
     text-decoration: none;
     font-size: 2em;
@@ -88,11 +88,11 @@ a{
     /* transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out; */
 
 }
-a:hover{
+nav a:hover{
     color: #E27689;
 
 }
-nav{
+header nav{
     clear: both;
 }
 nav li span{
@@ -103,19 +103,55 @@ nav li span{
 
 
 
-.bottom{
+header .bottom{
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 20px;
+    
+
+    /* margin: auto; */
+    /* left: 0;
+    width: 20vw; */
 }
-.bottom address{
+/* .bottom address{
     display: flex;
     align-items: center;
+} */
+address{
+    display: flex;
+    width: 20vw;
+    align-items: center;
+    justify-content: center;
+    /* transform: translate(50%, -50%); */
+}
+address ul{
+    /* width: 300em; */
 }
 
+address li{
+    display: inline;
+    /* text-align: center; */
+    /* height: 62px; */
+    list-style: none;
+    padding: 0 calc(500vw/100*20/100);
+    /* padding: 0 calc(2000vw/100*5/100); */
+    /* margin: auto;
+    width: 20vw; */
 
+}
+address a{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 300;
+    color: #fff;
+    /* padding: 11px 14px; */
+    transition: all 0.35s ease;
+    /* transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out; */
 
-
+}
+address a:hover{
+    color: #E27689;
+}
 
 
 
@@ -123,16 +159,14 @@ nav li span{
 /* Main */
 section{
     display: block;
-    float:left;
+    float: left;
     margin-left:20vw;
     background-color: aqua;
     height: 100vh;
-    /* height: 100vmin; */
-    /* width: 80vw; */
-    /* width: calc(80% - 0px); */
-    width: 80%;
-    /* box-sizing: border-box; */
+    width: 80vw;
 }
+
+
 #intro{
     background-image: url(../img/banner.jpg);
     background-size: auto 100vw;
@@ -145,7 +179,6 @@ section{
     flex-wrap: wrap;
     justify-content: center;
 }
-
 
 
 
@@ -167,7 +200,7 @@ h2.alt {
         color: #fff;
     }
 
-.container p{
+#intro .container p{
     color: rgba(255, 255, 255, 0.75);
     font-size: 2.2em;
     margin-bottom: 50px;
