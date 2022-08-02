@@ -14,22 +14,63 @@ body{
     max-width: 1000px;
     margin: auto;
     background-color: rgb(243, 236, 226);
+    padding: 0 50px 50px 50px;
 }
 
 header{
-    /* background-color: #69561a; */
+    background-color: #fff;
     text-align: center;
     /* color: white; */
     padding: 10px;
     margin-bottom: 20px;
 }
 
-h1{
-    line-height: 50px;
+header h1{
+    /* line-height: 50px; */
+    padding: 10px;
+    margin-bottom: 20px;
 }
+
+nav ul{
+    /* width: 100%; */
+    /* float: left; */
+    /* margin: 0 auto; */
+    /* position: relative; */
+    /* width: 100%; */
+    
+
+
+}
+
+nav li{
+    display: inline;
+    /* float: left; */
+    /* margin: 0 auto; */
+    /* position: absolute; */
+    /* margin: 0 auto; */
+    /* left: 50%; */
+    list-style: none;
+
+
+
+}
+nav a{
+    display: inline-block;
+    /* float: left; */
+    list-style: none;
+    text-decoration: none;
+    width: 90px;
+    padding: 10px 10px;
+    border: 1px solid black;
+    margin: 0 30px;
+
+}
+
+
 
 h2{
     font-size: 18px;
+    margin-top: 10px;
     /* font-weight: 700; */
     /* line-height: 25px; */
 }

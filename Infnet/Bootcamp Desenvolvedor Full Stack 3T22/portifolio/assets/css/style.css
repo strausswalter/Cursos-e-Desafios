@@ -10,6 +10,23 @@ body{
 }
 
 
+/* Geral */
+h2{
+    font-size: 5.0em;
+    font-weight: 300;
+    color: #666;
+    margin-bottom: 50px;
+}
+p{
+    font-size: 2.5em;
+    line-height: 1.7em;
+    text-align: center;
+    color:#888;
+    font-weight: 300;
+
+}
+
+
 
 /* Header ( Side Bar ) */
 
@@ -159,63 +176,65 @@ address a:hover{
 /* Main */
 section{
     display: block;
+    position: relative;
     float: left;
     margin-left:20vw;
     /* background-color: aqua; */
     height: 100vh;
     width: 80vw;
-    padding: 0 43px;
+    padding: 101px; 100px 40px 100px;
+    text-align: center;
 }
-
 
 #intro{
     background-image: url(../img/banner.jpg);
-    background-size: auto 100vw;
-
-    /* método flex para posicionamento Vertical */
-    text-align: center;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    background-size: auto 80vw;
+    position: relative;
 }
 
-
-
-
-/* Container Intro*/
-
-.container {
-    padding: 60px;
+.boxIntroH2{
+    width: 100%;
+    /* margin: 0 auto; */
+    /* text-align: center; */
+    line-height: 6.5em;
+    /* margin-top: 150px; */
 }
 
 h2.alt {
     color: #FFFFFFBF;
     font-size: 4.5em;
-    margin-bottom: 22px;
-
 }
 
     h2.alt strong {
         color: #fff;
     }
 
-#intro .container p{
-    color: rgba(255, 255, 255, 0.75);
-    font-size: 2.2em;
+.boxIntroCenter{
+    position:absolute;
+    left: calc(50% - (785px/2)); /* 785 (largura deste elemento) dividido por 2 */
+    top: calc(50% - (355px/2)); /* 355 (altura deste elemento) dividido por 2 */
+}
+
+
+.boxIntroP{
     margin-bottom: 50px;
-    line-height: 1.75em;
+    width: 700px;
+    margin: 0 auto 50px auto;
+}
+
+p.alt{
+    color: #FFFFFFBF;
+    font-size: 2.5em;
 }
 
 .button{
     position: relative;
     display: inline-block;
-    font-size: 2.2em;
+    font-size: 2.5em;
     border-radius: 0.35em;
     color: #fff !important;
     text-decoration: none;
-    padding: 17px 56px;
+    padding: 19px 63px;
     background-color: #8ebebc;
     border: 0;
     cursor: pointer;
@@ -227,32 +246,24 @@ h2.alt {
 
 #portfolio{
     background-color: #f5fafa;
-    margin: 72px 0;
+    /* margin: 72px 0; */
     /* background-color: #E27689; */
 }
 
 
-#portfolio h2{
-    font-size: 5.0em;
-    font-weight: 300;
-    color: #666;
-    /* line-height: 1.5em; */
-    text-align: center;
-    padding: 80px 0 70px 0;
-		/* letter-spacing: -1px; */
-        /* margin: 0; */
-}
-#portfolio p{
-    font-size: 2.1em;
-    line-height: 2.0em;
-    text-align: center;
-    color:#888888;
-    font-weight: 300;
 
+
+
+
+/* Sobre */
+#sobre{
+    background-color: #f5fafa;
 }
 
-
-
+/* Contato */
+#contato{
+    background-color: #f5fafa;
+}
 
 
 /* Footer */
