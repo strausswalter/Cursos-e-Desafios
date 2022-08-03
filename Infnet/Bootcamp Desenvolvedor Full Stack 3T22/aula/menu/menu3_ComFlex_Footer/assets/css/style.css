@@ -1,0 +1,149 @@
+html, body {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+}
+
+footer {
+    background: tomato;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  /* cria espaço entre logo e nav do tamanho flex-grow1*/
+  .grow1 {
+    flex-grow: 1;
+  }
+
+  .logo {
+    flex-grow: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  nav {
+    flex-grow: 0;
+    /* float: right; */
+  }
+footer nav ul{  /* --menu nivel 1*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+footer>nav>ul>li{
+    float: left;
+    position: relative; /* position: relative; */
+   
+}
+
+      footer>nav>ul>li>a,
+      footer>nav>ul>li>a:visited{
+          padding: 20px 30px;
+          /* display: block; */
+          float: left;
+          font-size: 14px;
+          text-decoration: none;
+          font-weight: 600;
+          color: #fff;
+          border-top: 3px solid transparent;
+      }
+
+    
+
+      footer>nav>ul>li>a:hover,
+          footer>nav>ul>li>a:active {
+            border-top-color: #fff;
+          }
+
+      footer>nav>ul>li:hover>ul{
+        display: block;
+      }
+
+/* lista menu nivel 2  -- position: absolute */
+footer>nav>ul>li>ul{
+  /* border: 3px solid blueviolet; */
+  position: absolute;
+  top:-173px;
+  display: none;
+  list-style: none;
+  /* background-color: #cd3333; */
+  width: 60px;
+
+}
+
+
+
+
+/* Ememento pai relative */
+footer>nav>ul>li>ul>li{
+  position:relative;
+  /* width: 90px; */
+  /* width: 80%; */
+}
+
+
+      footer>nav>ul>li>ul>li>a,
+      footer>nav>ul>li>ul>li>a:visited{
+        text-decoration: none;
+        /* background-color: aquamarine; */
+        padding: 20px 25px;
+        float: left;
+        font-size: 12px;
+        font-weight: 600;
+        color: #fff;
+        border-top: 3px solid transparent;
+        background: #b0b0b0;
+        width: 100%;
+      }
+      footer>nav>ul>li>ul>li>a:hover,
+      footer>nav>ul>li>ul>li>a:active{
+        border-top-color: #fff;
+        }
+
+      footer>nav>ul>li>ul>li:hover>ul{
+        display: block;
+      }
+
+
+
+
+/* Ememento filho absolute */
+footer>nav>ul>li>ul>li>ul{
+  position: absolute;
+  list-style: none;
+  float: left;;
+  display: none;
+  /* border-top: 2px solid #fff; */
+  left: -200%;
+  bottom: -114px;
+  width: 70px;
+
+  
+}
+
+footer>nav>ul>li>ul>li>ul>li>a,
+footer>nav>ul>li>ul>li>ul>li>a:visited{
+  text-decoration: none;
+  padding: 20px 25px;
+  float: left;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  border-top: 3px solid transparent;
+  background: #b0b0b0;
+  width: 100%;
+  
+}
+
+footer>nav>ul>li>ul>li>ul>li>a:hover,
+footer>nav>ul>li>ul>li>ul>li>a:active{
+  border-top-color: #fff;
+}
+
+footer>nav>ul>li>ul>li>ul>li:hover>a{
+  display: block;
+}

@@ -1,0 +1,99 @@
+
+/* 
+      header {
+        background: tomato;
+        display: flex;
+      } */
+
+/* 
+    .grow1 {
+        flex-grow: 1;
+      }
+   */
+
+/* 
+    .logo {
+        flex-grow: 0;
+        display: flex;
+        align-items: center;
+      }
+          */
+      /* nav {
+        flex-grow: 0;
+      } */
+/*       
+    header>nav {
+        float: right;
+      } */
+/* 
+      header>nav>ul {
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+      } */
+
+      /* header>nav>ul>li {
+        float: left;
+        position: relative; 
+      } */
+  
+      /* header>nav>ul>li>a,
+      header>nav>ul>li>a:visited {
+        padding: 20px 30px;
+        float: left;
+        font-size: 14px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 600;
+        color: #fff;
+        border-top: 3px solid transparent;
+      } */
+
+    /* header>nav>ul>li>a:hover,
+    header>nav>ul>li>a:active {
+      border-top-color: #fff;
+    } */
+
+
+
+/* SUB ITENS */
+
+subItemUL{
+        background-color: blue;
+        border: 2px solid black;
+        
+        /* padding: 20px 30px; */
+        /* float: left; */
+        font-size: 14px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 600;
+        color: #fff;
+      }
+.subItem{
+    border: 2px solid black;
+    padding: 2px 3px;
+    position: absolute;/* position: absolute */
+    top: 60px; /* Para posicionar abaixo do elemento pai, que possui padding 30+30.  */
+
+    /* float: left; */
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+}
+
+
+<li><a href="">Item 2</a></li>
+
+
+header>nav>ul>li {
+    float: left;
+    position: relative;
+    border: 2px solid green;
+}
+
+Cursos-e-Desafios\Infnet\Bootcamp Desenvolvedor Full Stack 3T22\aula\menu\menu2_ComFlex\menuComFlex.html
+
+https://vscode.dev/github/strausswalter/Cursos-e-Desafios/blob/6df6f6d274839b5258660ddd11e4d514567d121c/Infnet/Bootcamp Desenvolvedor Full Stack 3T22/aula/menu/menu2_ComFlex/menuComFlex.html#L23

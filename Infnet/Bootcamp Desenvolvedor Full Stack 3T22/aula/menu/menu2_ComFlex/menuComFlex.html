@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="./assets/img/logo.png" alt="" width="100">
+        </div>
+        <div class="grow1"></div><!--cria espaço entre logo e nav do tamanho flex-grow1-->
+        <nav>
+            <ul> <!--lista menu nivel 1  -->
+                <li><a href="#">Item 1</a></li> 
+                <li><a href="#">Item 2</a></li> 
+                <li> <!--position: relative-->
+                    <a href="#">Item 3</a> 
+                    <ul> <!--lista menu nivel 2  -- position: absolute-->
+                        <li>
+                            <a href="#">SubItem 1</a>
+                        </li> 
+                        <li> <!--position: relative-->
+                            <a href="#">SubItem 2</a>
+                                <ul> <!--lista menu nivel 3-->
+                                    <li>
+                                        <a href="#">SubItem 2.1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">SubItem 2.2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">SubItem 2.3</a>
+                                    </li>
+                                </ul>
+                            
+                        </li>
+                        <li>
+                            <a href="#">SubItem 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">Item 4</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+</body>
+
+</html>
