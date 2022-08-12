@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .square-yellow{
+            width: 150px;
+            height: 150px;
+            background: yellow;
+            animation-name: changeRed;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            /* animation-delay: 5s; */
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+        }
+
+        .square-yellow:hover{
+            animation-name: changeToGreen;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+
+
+
+        @keyframes changeRed{
+            0%{
+                background: yellow;
+            }
+            50%{
+                background: red;
+            }
+            100%{
+                background: yellow;
+            }
+        }
+
+
+
+        @keyframes changeToGreen{
+            0%{
+                background: yellow;
+            }
+            50%{
+                background: green;
+            }
+            100%{
+                background: yellow;
+            }
+        }
+
+        .box2{
+            position: absolute;
+            background-color: blueviolet;
+            top: 300px;
+            left: 100px;
+            animation-name: pulse;
+            width: 150px;
+            height: 150px;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        
+
+        }
+
+        @keyframes pulse{
+            0%{
+                transform: scale(1);
+                /* transform: rotate(0deg); */
+            }
+            50%{
+                transform: scale(1.5);
+                /* transform: rotate(90deg); */
+
+            }
+            100%{
+                transform: scale(1);
+                transform: rotate(180deg);
+
+            }
+        }
+
+
+    </style>
+
+</head>
+<body>
+    
+<div class="square-yellow"></div>
+<div class="box2"></div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

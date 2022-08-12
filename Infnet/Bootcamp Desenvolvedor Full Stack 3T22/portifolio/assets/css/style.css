@@ -1,21 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,300&display=swap');
 
 
-/* RASCUNHO */
-body{
-    position: relative;
-    min-height: 100vh;
-    width: 100%;
-    overflow: hidden;
-}
 
+body{
+    width: 100%;
+    height: 100vh;
+}
 
 /* Geral */
 h2{
     font-size: 5.0em;
     font-weight: 300;
     color: #666;
+    margin-top: 10vh;
     margin-bottom: 50px;
+
 }
 p{
     font-size: 2.5em;
@@ -31,8 +30,8 @@ p{
 /* Header ( Side Bar ) */
 
 header{
-    display: block;
-    float:left;
+    /* display: block; */
+    /* float:left; */
     /* background-color: #11101d; */
     background-color: rgb(34, 38, 41);
     /* top */
@@ -43,51 +42,63 @@ header{
 }
 
 
-/* logo */
+/* LOGO */
+  
 .logo{
-    display: block;
-    margin: 60px 28px;
-    /* height: 100px; */
-    /* margin-bottom: 100px; */
-    overflow: hidden;
-    position: relative/
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 30px 1vw;
+    margin-bottom: 4vh;
+    /* background-color: #8ebebc; */
+
+
+    /* position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate (-50%, -50%);  */
+    /* height: 180px; */
 
 }
+
+
 .logo img{
-    display: block;
+    /* display: block; */
     height: 60px;
-    object-fit: cover;
-    margin: auto 0;
+    /* object-fit: cover; */
+    /* margin: auto 0; */
     border-radius: 12px;
-    float: left;
+    /* float: left; */
     /* overflow: hidden; */
 
 }
+
 .boxNomeFora{
+    
     height: 60px;
-    width: calc(100% - 60px);
-    display: block;
-    float: right;
+    width: 100%;
+    /* display: block; */
+    /* float: right; */
     /* background-color: blue; */
     color: #fff;
     text-align: right;
-    position: relative;
 }
-.boxNomeDentro{
-    /* background-color: red; */
-    margin-top: calc((60px - 39px)/2); /* altura do  boxNomeFora (60px) - altura do boxNomeDentro (39) / 2 */
-}
-.boxNomeDentro h1{
+
+
+.boxNomeFora h1{
     font-size: 22px;
-    margin-bottom: 7px;
+    /* margin-bottom: 7px; */
     /* line-height: 20px; */
 }
-.boxNomeDentro p{
+.boxNomeFora p{
     font-size: 14px;
     color: rgba(255, 255, 255, 0.5);
     text-align: right;
 }
 
+nav{
+    /* display: block; */
+}
 
 nav li{
     display: block;
@@ -176,14 +187,14 @@ address a:hover{
 
 /* Main */
 section{
-    display: block;
+    /* display: block; */
     position: relative;
     float: left;
     margin-left:20vw;
     /* background-color: aqua; */
     height: 100vh;
     width: 80vw;
-    padding: 101px; 100px 40px 100px;
+    /* padding: 101px; 100px 40px 100px; */
     text-align: center;
 }
 
@@ -276,3 +287,106 @@ footer{
     height: 20vh;
     width: 80%;
 }
+
+
+/*----------------------------------------------
+Media Queries
+----------------------------------------------*/
+
+/*Para Dispositivos de 980px ou menos*/
+@media screen and (max-width: 980px){
+	
+    
+    /* .container {
+        width: 980px;
+    }
+    .info{
+        padding-left: 1%;
+        box-sizing: border-box;
+    } */
+}
+
+/*Para Dispositivos de 768px ou menos*/
+@media screen and (max-width: 768px){
+	
+    
+    /* .container {
+        width: 100%;
+    }
+    .box4{
+        width: 50%;
+        margin-bottom: 20px;
+    } */
+
+}
+
+/*Para Dispositivos de 480px ou menos*/
+@media screen and (max-width: 480px){
+	
+    
+    
+    /* .logo {
+        width: 150px;
+        margin: 0 auto;
+        float: none;
+    }
+	.menu a {
+        padding: 0 15px;
+    }
+    .banner{
+        font-size: 7px;
+    }
+    .banner p {
+        padding: 0 15%;
+    }
+    .box3{
+        width: 50%;
+    }
+    #price .box3{
+        width: 100%;
+    }
+    .box2{
+        width: 100%;
+    }
+    .address{
+        margin-bottom: 25px;
+    }
+    .socialmedia{
+        width: 156px;
+        margin: 0 auto;
+    }
+    #contact input[type="submit"]{
+        float: none;
+        margin: 0 auto;
+    } */
+}
+
+@media screen and (max-width: 420px){
+    
+    
+    
+    /* .box4{
+        width: 100%;
+    } */
+}
+
+
+/*Para Dispositivos de 320px ou menos*/
+@media screen and (max-width: 320px){	
+	
+    
+    
+    /* .menu ul{
+        text-align: center;
+    }	
+    .box4, .box3{
+        width: 100%;
+    }
+    #depoimentos{
+        font-size: 8px;
+    }
+    #depoimentos p{
+        padding: 0 5%;
+    } */
+}
+
