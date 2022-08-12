@@ -31,7 +31,11 @@ p{
 
 header{
     /* display: block; */
+<<<<<<< HEAD
     /* float:left; */
+=======
+    float:left;
+>>>>>>> 1a698e1b64395b0dfff5613da9ef5372e6c8b2cd
     /* background-color: #11101d; */
     background-color: rgb(34, 38, 41);
     /* top */
@@ -45,6 +49,7 @@ header{
 /* LOGO */
   
 .logo{
+<<<<<<< HEAD
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -60,6 +65,36 @@ header{
     /* height: 180px; */
 
 }
+=======
+    width: 100%;
+    /* position: relative; */
+
+    /* height: 180px; */
+
+        /* display: block; */
+
+    /* margin: 60px 28px; */
+    /* height: 100px; */
+    /* margin-bottom: 100px; */
+    /* overflow: hidden; */
+
+}
+.containerLogo{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 30px;
+    background-color: #8ebebc;
+
+
+    /* position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate (-50%, -50%);  */
+    /* height: 180px; */
+
+}
+>>>>>>> 1a698e1b64395b0dfff5613da9ef5372e6c8b2cd
 
 
 .logo img{
@@ -76,7 +111,11 @@ header{
 .boxNomeFora{
     
     height: 60px;
+<<<<<<< HEAD
     width: 100%;
+=======
+    width: calc(100% - 20px);
+>>>>>>> 1a698e1b64395b0dfff5613da9ef5372e6c8b2cd
     /* display: block; */
     /* float: right; */
     /* background-color: blue; */
