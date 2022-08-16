@@ -1,0 +1,120 @@
+
+
+//________________________________________________
+
+//Retirado do site do Bootstrap: https://getbootstrap.com/docs/5.2/layout/breakpoints/
+//Mas adaptado para not-mobile-first
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// XX-Large devices (larger desktops, 1400px and down)
+@media (max-width: 1400px) { ... }
+
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+
+
+
+
+/*----------------------------------------------
+Media Queries
+----------------------------------------------*/
+
+/*Para Dispositivos de 980px ou menos*/
+@media screen and (max-width: 980px){
+	.container {
+        width: 980px;
+    }
+    .info{
+        padding-left: 1%;
+        box-sizing: border-box;
+    }
+}
+
+/*Para Dispositivos de 768px ou menos*/
+@media screen and (max-width: 768px){
+	.container {
+        width: 100%;
+    }
+    .box4{
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+}
+
+/*Para Dispositivos de 480px ou menos*/
+@media screen and (max-width: 480px){
+	.logo {
+        width: 150px;
+        margin: 0 auto;
+        float: none;
+    }
+	.menu a {
+        padding: 0 15px;
+    }
+    .banner{
+        font-size: 7px;
+    }
+    .banner p {
+        padding: 0 15%;
+    }
+    .box3{
+        width: 50%;
+    }
+    #price .box3{
+        width: 100%;
+    }
+    .box2{
+        width: 100%;
+    }
+    .address{
+        margin-bottom: 25px;
+    }
+    .socialmedia{
+        width: 156px;
+        margin: 0 auto;
+    }
+    #contact input[type="submit"]{
+        float: none;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .box4{
+        width: 100%;
+    }
+}
+
+
+/*Para Dispositivos de 320px ou menos*/
+@media screen and (max-width: 320px){	
+	.menu ul{
+        text-align: center;
+    }	
+    .box4, .box3{
+        width: 100%;
+    }
+    #depoimentos{
+        font-size: 8px;
+    }
+    #depoimentos p{
+        padding: 0 5%;
+    }
+}
