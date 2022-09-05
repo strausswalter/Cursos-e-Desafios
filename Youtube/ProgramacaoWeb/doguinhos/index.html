@@ -1,94 +1,290 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- O componente "Accordion" (section FAQ) da versão bootstrap abaixo, não funciona direto com o dark-theme usado. -->
+    <!--     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+ -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!-- todo: como fazer isso? -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
-    <title>Doguinhos's</title>
-    <style>
-        .titulo {
-            font-weight: 400;
-        }
-    </style>
+    <title>Doguinho's</title>
+    <link rel="icon" type="image/png" href="./assets/img/veterinario.png">
 </head>
 
-<body>
     <!-- Projeto estudo retirado de: https://www.youtube.com/watch?v=2t58du_iMHQ&list=PL2Fdisxwzt_drOw-CacUTPr9c8p06UO59&index=26 -->
 
-    <div class="container">
-        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+
+<body data-bs-spy="scroll" data-bs-target="#menu">
+    <!-- data-bs-smooth-scroll="true" tabindex="0" -->
+<!-- <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light p-3 rounded-2" tabindex="0">-->
+    
+    
+    
+    <div id="topo" class="container">
+        <header class="bg-light sticky-top d-flex flex-wrap justify-content-center py-3 mb-5 border-bottom">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
 
-                <strong class="fs-4"><i class="mdi mdi-dog"></i> Doguinho's</strong>
+                <!-- <strong class="text-primary fs-4"><i class="mdi mdi-dog"></i> Doguinho's</strong> -->
+                <span class="text-primary fs-4 fw-bold"><i class="mdi mdi-dog"></i> Doguinho's</span>
+
             </a>
 
-            <ul class="nav nav-pills">
-                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Serviços</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Preços</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">FAQ</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+            <ul id="menu" class="nav nav-pills">
+                <!-- Dark & Light Mode Switcher (https://webcodeflow.com/bootstrap-5-dark-theme/) -->
+                <div class="form-check form-switch ms-auto mt-2 me-3">
+                    <label id="icone-toggle" class="form-check-label ms-3" for="lightSwitch">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="25"
+                        height="25"
+                        fill="currentColor"
+                        class="bi bi-brightness-high"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+                        />
+                      </svg>
+                    </label>
+                    <input class="form-check-input" type="checkbox" id="lightSwitch" />
+                </div>
+                <li class="nav-item"><a href="#topo" class="nav-link active" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="#servicos" class="nav-link">Serviços</a></li>
+                <li class="nav-item"><a href="#precos" class="nav-link">Preços</a></li>
+                <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
+                <li class="nav-item"><a href="#contatos" class="nav-link">Contato</a></li>
             </ul>
         </header>
 
         <section class="mb-5">
-            <div class="row text-md-center">
+            <div class="row text-center text-md-start">
                 <div class="col-md-6 mt-3">
-                    <h2 class="h5 mt-5">Aqui o seu amigo é tratado com carinho</h2>
-                    <h1 class="display-1 titulo">Clínica Veterinária</h1>
+                    <h2 class="mt-5 fs-5">Aqui o seu amigo é tratado com carinho</h2>
+                    <h1 class="display-2 fw-bold">Clínica Veterinária</h1>
                     <p class=" mt-4 text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. At esse est
                         adipisci earum! Repellendus distinctio molestiae nisi. Facilis impedit, velit nam, accusantium
                         rerum illum, obcaecati temporibus possimus aspernatur quo repellat.
                     </p>
-                    <a href="#" class="btn btn-primary mt-5 p-4 w-50 fs-5">Agendar Consulta <i
+                    <a href="https://api.whatsapp.com/send?phone=5521989211938" target="_blank" class="btn btn-primary mt-5 p-4 w-50 fs-5">Agendar Consulta <i
                             class="mdi mdi-arrow-right-thick"></i>
                     </a>
                 </div>
-                <div class="col-md-6 float-end">
+                <div class="col-md-6">
                     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-                    <lottie-player class="m-0 m-auto float-md-end" src="https://assets5.lottiefiles.com/packages/lf20_erya171l.json"
-                        background="transparent" speed="1" style="max-width: 70%; height: 300px;" loop autoplay>
+                    <lottie-player class="m-0 m-auto float-md-end"
+                        src="https://assets5.lottiefiles.com/packages/lf20_erya171l.json" background="transparent"
+                        speed="1" style="max-width: 70%; height: 300px;" loop autoplay>
                     </lottie-player>
                 </div>
             </div>
         </section>
-        <section id="servicos" class="text-center py-5 my-5">
-            <div class="row">
-                <div class="col-lg-4">
-                  <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-          
-                  <h2 class="fw-normal">Heading</h2>
-                  <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-                  <p><a class="btn btn-secondary" href="#">View details »</a></p>
+
+        <!-- Carousel -->
+        <section id="servicos" class="text-center my-5 py-5">
+            <div class="row mt-5 pt-5">
+                <div class="col-12">
+                    <h2 class="display-5 fw-bold">Serviços Prestados</h2>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-4 mt-5">
+                    <img class="rounded-circle border shadow p-5" src="./assets/img/vacinado.png" alt="">
+                    <h2 class="fw-normal mt-3">Vacinação</h2>
+                    <p>Some representative placeholder content for the three columns of text below the carousel. This is
+                        the first column.</p>
+                    <p><a class="btn btn-secondary" href="#">View details »</a></p>
                 </div><!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                  <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-          
-                  <h2 class="fw-normal">Heading</h2>
-                  <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-                  <p><a class="btn btn-secondary" href="#">View details »</a></p>
+                <div class="col-lg-4 mt-5">
+                    <img class="rounded-circle border shadow p-5" src="./assets/img/veterinario.png" alt="">
+                    <h2 class="fw-normal mt-3">Emergências</h2>
+                    <p>Another exciting bit of representative placeholder content. This time, we've moved on to the
+                        second column.</p>
+                    <p><a class="btn btn-secondary" href="#">View details »</a></p>
                 </div><!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                  <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-          
-                  <h2 class="fw-normal">Heading</h2>
-                  <p>And lastly this, the third column of representative placeholder content.</p>
-                  <p><a class="btn btn-secondary" href="#">View details »</a></p>
+                <div class="col-lg-4 mt-5">
+                    <img class="rounded-circle border shadow p-5" src="./assets/img/dog.png" alt="">
+                    <h2 class="fw-normal mt-3">Raio-X</h2>
+                    <p>And lastly this, the third column of representative placeholder content.</p>
+                    <p><a class="btn btn-secondary" href="#">View details »</a></p>
                 </div><!-- /.col-lg-4 -->
+            </div>
+        </section>
+
+        <!-- Preços -->
+        <section id="precos" class="py-5 my-5">
+            <div class="pricing-header text-center mt-5 pt-5">
+                <h2 class="display-5 fw-bold">Preços</h2>
+                <p class="fs-5 mb-5 text-muted">Quickly build an effective pricing table for your potential customers
+                    with this Bootstrap example. It’s built with default Bootstrap components and utilities with little
+                    customization.</p>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm border-primary bg-light">
+                        <div class="card-header py-3 text-bg-primary border-primary">
+                            <h4 class="my-0 fw-normal">Enterprise</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$29<small class="text-muted fw-light">/mo</small>
+                            </h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>30 users included</li>
+                                <li>15 GB of storage</li>
+                                <li>Phone and email support</li>
+                                <li>Help center access</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm border-primary bg-light">
+                        <div class="card-header py-3 text-bg-primary border-primary">
+                            <h4 class="my-0 fw-normal">Enterprise</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$29<small class="text-muted fw-light">/mo</small>
+                            </h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>30 users included</li>
+                                <li>15 GB of storage</li>
+                                <li>Phone and email support</li>
+                                <li>Help center access</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm border-primary bg-light">
+                        <div class="card-header py-3 text-bg-primary border-primary">
+                            <h4 class="my-0 fw-normal">Enterprise</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$29<small class="text-muted fw-light">/mo</small>
+                            </h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>30 users included</li>
+                                <li>15 GB of storage</li>
+                                <li>Phone and email support</li>
+                                <li>Help center access</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="py-5 my-5">
+            <div class="row pt-5 mt-5">
+                <div class="col-12 text-center">
+                    <h2 class="display-5 fw-bold">Perguntas Frequentes</h2>
+                </div>
+            </div>
+            <div class="row mt-3 mb-5">
+                <div class="col-12">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="text-primary accordion-button bg-light" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                    aria-controls="collapseOne">
+                                    Accordion Item #1
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body bg-light">
+                                    <strong>This is the first item's accordion body.</strong> It is shown by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="text-primary accordion-button bg-light collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    Accordion Item #2
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body bg-light">
+                                    <strong>This is the second item's accordion body.</strong> It is hidden by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingThree">
+                            <button class="text-primary accordion-button bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Accordion Item #3
+                            </button>
+                          </h2>
+                          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body bg-light">
+                              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contatos -->
+        <section id="contatos" class="py-5 my-5">
+            <div class="row pt-5 mt-5">
+                <div class="col-12 text-center">
+                    <h2 class="display-5 fw-bold">Contatos</h2>
+                </div>
+            </div>
+            <div class="row align-items-md-stretch text-center">
+                <div class="col-md-6">
+                    <div class="h-100 p-5 bg-light border rounded-3">
+                        <h2>Fale Conosco</h2>
+                        <p class="p-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis velit, nostrum tempora alias animi numquam possimus a sint sed repudiandae asperiores sapiente eius! Soluta veritatis fugiat vero obcaecati officia aperiam.</p>
+                        <p class="mt-4"><i class="mdi mdi-phone"></i> (00) 00000-0000</p>
+                        <p class="mt-4"><i class="mdi mdi-email"></i> email@provedor.com.br</p>
+                        <a target="_blank" href="https://api.whatsapp.com/send?phone=5521989211938" class="mt-4 w-75 p-3 btn btn-success" type="button"><i class="mdi mdi-whatsapp"></i> Chamar Whatssapp</a>
+                    </div>
+                  </div>
+                <div class="col-md-6">
+                  <div class="h-100 p-5 bg-light border rounded-3">
+                    <!-- <h2>Add borders</h2> -->
+                    <p>Rua do Exemplo, 123, Centro - Cidade</p>
+                    <iframe class="m-0 m-auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.3192800814472!2d-41.918485721674166!3d-22.492201028933117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x97b5139af1f85b%3A0x8db3ec8d5bb3683!2sTrack%20Services!5e0!3m2!1spt-BR!2sbr!4v1661366214677!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+
+
+                </div>
+                </div>
               </div>
         </section>
 
-
-
-
-
-
-
+        <!-- Footer -->
+        <footer class="container mt-5 p-5">
+            <p class="float-end"><a href="#">Ir para o topo</a></p>
+            <p>© 2017–2022 Company, Inc. · <strong><i class="mdi mdi-dog"></i> Doguinho's — Clínica Veterinária </strong> <a class="ms-5" href="#">Politica de Privacidade</a> · <a href="#">Termos de Uso</a></p>
+          </footer>
 
 
 
@@ -99,22 +295,17 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+
+        <!-- O componente "Scrollspy" não funciona direito na versão atual do Bootstrap abaixo:  -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous">
+    </script> -->
+    <script src="./assets/js/switch.js"></script>
+
 
 </body>
 
