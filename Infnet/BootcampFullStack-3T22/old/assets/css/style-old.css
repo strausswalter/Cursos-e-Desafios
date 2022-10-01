@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,300&display=swap');
+
+
+/* RASCUNHO */
+body{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/* Geral */
+h2{
+    font-size: 5.0em;
+    font-weight: 300;
+    color: #666;
+    margin-bottom: 50px;
+}
+p{
+    font-size: 2.5em;
+    line-height: 1.7em;
+    text-align: center;
+    color:#888;
+    font-weight: 300;
+
+}
+
+
+
+/* Header ( Side Bar ) */
+
+header{
+    display: block;
+    float:left;
+    /* background-color: #11101d; */
+    background-color: rgb(34, 38, 41);
+    /* top */
+    color: #fff;
+    height: 100vh;
+    width: 20vw;
+    position: fixed;
+}
+
+
+/* logo */
+.logo{
+    display: block;
+    margin: 60px 28px;
+    /* height: 100px; */
+    /* margin-bottom: 100px; */
+    overflow: hidden;
+    position: relative/
+
+}
+.logo img{
+    display: block;
+    height: 60px;
+    object-fit: cover;
+    margin: auto 0;
+    border-radius: 12px;
+    float: left;
+    /* overflow: hidden; */
+
+}
+.boxNomeFora{
+    height: 60px;
+    width: calc(100% - 60px);
+    display: block;
+    float: right;
+    /* background-color: blue; */
+    color: #fff;
+    text-align: right;
+    position: relative;
+}
+.boxNomeDentro{
+    /* background-color: red; */
+    margin-top: calc((60px - 39px)/2); /* altura do  boxNomeFora (60px) - altura do boxNomeDentro (39) / 2 */
+}
+.boxNomeDentro h1{
+    font-size: 22px;
+    margin-bottom: 7px;
+    /* line-height: 20px; */
+}
+.boxNomeDentro p{
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: right;
+}
+
+
+nav li{
+    display: block;
+    height: 62px;
+    list-style: none;
+    padding: 0 30px;
+}
+nav a{
+    display: block;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 300;
+    color: #fff;
+    /* padding: 11px 14px; */
+    transition: all 0.35s ease;
+    /* transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out; */
+
+}
+nav a:hover{
+    color: #E27689;
+
+}
+header nav{
+    clear: both;
+}
+nav li span{
+    /* margin-left: 14px; */
+    float: right;
+}
+
+
+
+
+header .bottom{
+    position: absolute;
+    bottom: 20px;
+    
+
+    /* margin: auto; */
+    /* left: 0;
+    width: 20vw; */
+}
+/* .bottom address{
+    display: flex;
+    align-items: center;
+} */
+address{
+    display: flex;
+    width: 20vw;
+    align-items: center;
+    justify-content: center;
+    /* transform: translate(50%, -50%); */
+}
+address ul{
+    /* width: 300em; */
+}
+
+address li{
+    display: inline;
+    /* text-align: center; */
+    /* height: 62px; */
+    list-style: none;
+    padding: 0 calc(500vw/100*20/100);
+    /* padding: 0 calc(2000vw/100*5/100); */
+    /* margin: auto;
+    width: 20vw; */
+
+}
+address a{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 300;
+    color: #fff;
+    /* padding: 11px 14px; */
+    transition: all 0.35s ease;
+    /* transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out; */
+
+}
+address a:hover{
+    color: #E27689;
+}
+
+
+
+
+/* Main */
+section{
+    display: block;
+    position: relative;
+    float: left;
+    margin-left:20vw;
+    /* background-color: aqua; */
+    height: 100vh;
+    width: 80vw;
+    padding: 101px; 100px 40px 100px;
+    text-align: center;
+}
+
+#intro{
+    background-image: url(../img/banner.jpg);
+    background-size: auto 80vw;
+    position: relative;
+}
+
+.boxIntroH2{
+    width: 100%;
+    /* margin: 0 auto; */
+    /* text-align: center; */
+    line-height: 6.5em;
+    /* margin-top: 150px; */
+}
+
+h2.alt {
+    color: #FFFFFFBF;
+    font-size: 4.5em;
+}
+
+    h2.alt strong {
+        color: #fff;
+    }
+
+.boxIntroCenter{
+    position:absolute;
+    left: calc(50% - (785px/2)); /* 785 (largura deste elemento) dividido por 2 */
+    top: calc(50% - (355px/2)); /* 355 (altura deste elemento) dividido por 2 */
+}
+
+
+.boxIntroP{
+    margin-bottom: 50px;
+    width: 700px;
+    margin: 0 auto 50px auto;
+}
+
+p.alt{
+    color: #FFFFFFBF;
+    font-size: 2.5em;
+}
+
+.button{
+    position: relative;
+    display: inline-block;
+    font-size: 2.5em;
+    border-radius: 0.35em;
+    color: #fff !important;
+    text-decoration: none;
+    padding: 19px 63px;
+    background-color: #8ebebc;
+    border: 0;
+    cursor: pointer;
+}
+
+
+
+/* Portfólio */
+
+#portfolio{
+    background-color: #f5fafa;
+    /* margin: 72px 0; */
+    /* background-color: #E27689; */
+}
+
+
+
+
+
+
+/* Sobre */
+#sobre{
+    background-color: #f5fafa;
+}
+
+/* Contato */
+#contato{
+    background-color: #f5fafa;
+}
+
+
+/* Footer */
+footer{
+    display: block;
+    float:left;
+    margin-left:20%;
+    background-color: rgb(79, 222, 13);
+    height: 20vh;
+    width: 80%;
+}
